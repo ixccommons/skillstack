@@ -14,6 +14,7 @@ marketing-workshop/
   flows/positioning.md  8 steps · ~40 min · + a 10-minute express pass
   flows/copy.md         8 steps · ~35 min
   flows/distribution.md 6 steps · ~25 min
+  portable/             the same flows, for people without Claude
 ```
 
 The three flows share one state file, `brand-brief.md`, written into the working
@@ -29,3 +30,10 @@ Copy the directory into wherever the agent looks for skills:
 cp -r marketing-workshop ~/.claude/skills/        # available everywhere
 cp -r marketing-workshop .claude/skills/          # this project only
 ```
+
+### On ChatGPT
+
+`marketing-workshop/portable/` runs the same flows without a skills directory —
+as a paste-in prompt, a Project, or a Custom GPT. The flow files are shared
+source, so calibrating a step updates both platforms. See
+[`marketing-workshop/portable/README.md`](marketing-workshop/portable/README.md).

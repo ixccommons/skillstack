@@ -81,10 +81,15 @@ it is free text, one section per flow, appended in order. Never rewrite an
 earlier flow's section; if positioning changes during the copy flow, note the
 revision in the copy section and update the header.
 
-Long output doesn't go in the brief. Full page copy, ad sets, email sequences and
-scheduled-task prompts are written to their own files — `copy/homepage.md`,
-`tasks/weekly-report.md` — and the brief records the decision and a pointer. The
-brief stays readable in two minutes; that's what makes it usable as a handoff.
+Long output doesn't go in the brief. The flows call these **drafts** — the
+homepage draft, the ad set, the task prompts — and each one is a file of its own:
+`copy/homepage.md`, `copy/ads.md`, `tasks/weekly-report.md`. The brief records the
+decision and a pointer. It stays readable in two minutes; that's what makes it
+usable as a handoff.
+
+The flows never name a path themselves, so that the same flow text can run on a
+platform with no filesystem. Mapping drafts onto storage is this file's job — see
+`portable/` for the ChatGPT version.
 
 ## Pacing — the rule that matters most
 
