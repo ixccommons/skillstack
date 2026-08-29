@@ -34,6 +34,7 @@ cp -r marketing-workshop .claude/skills/          # this project only
 ### On ChatGPT
 
 `marketing-workshop/portable/` runs the same flows without a skills directory —
-as a paste-in prompt, a Project, or a Custom GPT. The flow files are shared
-source, so calibrating a step updates both platforms. See
+as a paste-in prompt, a Project, or a Custom GPT — assuming a free account, which
+is what a workshop room actually has. The flow files are shared source, so
+calibrating a step updates both platforms. See
 [`marketing-workshop/portable/README.md`](marketing-workshop/portable/README.md).
