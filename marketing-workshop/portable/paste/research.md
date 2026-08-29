@@ -538,10 +538,11 @@ so it isn't lost.
 ## Business model mapping
 
 `positioning_input.fields.business_model` is free text as given. Map it to
-one of the nine `business_model` enum values in `pipeline-state.json` for
-everything downstream to key off — see `references/business-models.md`. If
-the mapping is ambiguous, ask rather than guess; funnel stages, channels and
-measurement all branch on this one value.
+one of the ten `business_model` enum values in `pipeline-state.json` for
+everything downstream to key off — see `references/business-models.md`, where
+each model is headed with the exact identifier to write. If the mapping is
+ambiguous, ask rather than guess, and don't settle for `unspecified`; funnel
+stages, channels and measurement all branch on this one value.
 
 ---
 

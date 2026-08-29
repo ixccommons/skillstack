@@ -1,7 +1,10 @@
 # Business Models
 
-`positioning_input.fields.business_model` gets mapped to one of these nine
-values (`pipeline-state.json.business_model`). Every stage of this pipeline —
+`positioning_input.fields.business_model` gets mapped to one of the ten
+`pipeline-state.json.business_model` enum values: the nine models below, each
+headed with the exact identifier to write, plus `unspecified`. Write the
+identifier, never the prose name — everything downstream keys off the enum
+value. Every stage of this pipeline —
 research, copy, distribution, measurement — should read this table before
 making a model-specific recommendation, rather than defaulting to B2B SaaS
 patterns for everything.
@@ -13,7 +16,7 @@ side, a consumer app with a subscription), pick the row that governs the
 
 ---
 
-### B2B SaaS
+### B2B SaaS — `b2b_saas`
 
 - **Funnel:** awareness → qualified conversation → demo/consultation →
   opportunity → customer
@@ -31,7 +34,7 @@ side, a consumer app with a subscription), pick the row that governs the
 - **Retention:** usage-based renewal signals (seat growth, feature adoption),
   not repeat purchase
 
-### B2B service or agency
+### B2B service or agency — `b2b_service_or_agency`
 
 - **Funnel:** awareness → qualified conversation → proposal → engagement →
   referral/repeat engagement
@@ -48,7 +51,7 @@ side, a consumer app with a subscription), pick the row that governs the
   practitioner as a visible person
 - **Retention:** repeat engagement and referral rate, not subscription churn
 
-### Ecommerce / D2C
+### Ecommerce / D2C — `ecommerce_d2c`
 
 - **Funnel:** discovery → product view → cart → purchase → repeat purchase
 - **Conversion asset:** product page or campaign landing page
@@ -63,7 +66,7 @@ side, a consumer app with a subscription), pick the row that governs the
 - **Retention:** repeat purchase rate and time-to-second-purchase are the
   north-star candidates, not just first conversion
 
-### Consumer application
+### Consumer application — `consumer_application`
 
 - **Funnel:** discovery → install → activation → retention → paid conversion
 - **Conversion asset:** app store listing plus a landing page for
@@ -80,7 +83,7 @@ side, a consumer app with a subscription), pick the row that governs the
 - **Retention:** the north star is usually retention itself, not a purchase
   event
 
-### Local business
+### Local business — `local_business`
 
 - **Funnel:** discovery → call/booking/directions → visit → review → repeat
   visit
@@ -96,7 +99,7 @@ side, a consumer app with a subscription), pick the row that governs the
   inquiries
 - **Retention:** repeat-visit and referral rate within the local area
 
-### Creator or personal brand
+### Creator or personal brand — `creator_or_personal_brand`
 
 - **Funnel:** discovery → subscription/registration → attendance/
   participation → return → purchase/support
@@ -113,7 +116,7 @@ side, a consumer app with a subscription), pick the row that governs the
 - **Retention:** the north star is usually returning audience share, not a
   single transaction
 
-### Event or community
+### Event or community — `event_or_community`
 
 - **Funnel:** discovery → registration → attendance/participation → return
 - **Conversion asset:** an event or membership landing page with a clear
@@ -129,7 +132,7 @@ side, a consumer app with a subscription), pick the row that governs the
 - **Retention:** return rate for recurring events, renewal rate for ongoing
   communities
 
-### Marketplace
+### Marketplace — `marketplace`
 
 - **Funnel:** qualified supply + qualified demand → match → transaction →
   repeat liquidity
@@ -147,7 +150,7 @@ side, a consumer app with a subscription), pick the row that governs the
   a marketplace with only demand-side proof is missing half its argument
 - **Retention:** repeat liquidity on both sides, not just first transaction
 
-### Nonprofit
+### Nonprofit — `nonprofit`
 
 - **Funnel:** awareness → engagement (subscribe/volunteer/attend) →
   contribution → repeat contribution/advocacy
@@ -163,3 +166,16 @@ side, a consumer app with a subscription), pick the row that governs the
 - **Proof:** specific, verifiable impact statements, financial transparency,
   named beneficiaries or programs where consent allows
 - **Retention:** repeat-donor or repeat-volunteer rate, not a single gift
+
+---
+
+### Unspecified — `unspecified`
+
+The starting value, and the correct one while the business model genuinely
+isn't known yet. It is not a mapping outcome: if a business doesn't fit a row
+above, ask rather than settling for `unspecified`, because funnel stages,
+channels and measurement all branch on this value and none of them have a
+sensible default.
+
+Leaving it `unspecified` past the research stage is a blocker to name, not a
+state to work around.
