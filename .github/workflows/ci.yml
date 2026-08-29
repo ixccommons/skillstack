@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Portable build freshness (marketing-workshop)
+        run: python3 marketing-workshop/portable/build.py --check
+
+      - name: Skill zip freshness (marketing-workshop)
+        run: python3 marketing-workshop/scripts/build_skill_zip.py --check
+
+      - name: marketing-workshop tests
+        run: python3 -m unittest discover -s marketing-workshop/tests -v
+
+      - name: Pipeline template validation
+        run: |
+          python3 marketing-workshop/scripts/init_pipeline.py /tmp/marketing-workshop-ci-smoke
+          echo "# Brand Brief — CI Smoke" > /tmp/marketing-workshop-ci-smoke/brand-brief.md
+          python3 marketing-workshop/scripts/validate_pipeline.py /tmp/marketing-workshop-ci-smoke
+
+      - name: Python compilation check
+        run: python3 -m compileall marketing-workshop

@@ -145,8 +145,15 @@ instead of "soon".
 proposition is the thing being communicated; the sentence is different in every
 room.
 
-**Write to brief:** the rules of the room for each channel, and the first post
-in full.
+If this session has real access to post in that channel and the person wants
+it live now, post it: show the exact destination and exact text once, get
+an explicit yes to that specific post, publish it, then check it actually
+appears there before calling it done. Without that access, the post above
+is the deliverable — hand it over as something to paste in, and say plainly
+that it isn't posted yet.
+
+**Write to brief:** the rules of the room for each channel, the first post
+in full, and whether it's live or ready to post.
 
 ---
 

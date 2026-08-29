@@ -1,0 +1,315 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skillstack/marketing-workshop/pipeline-state.schema.json",
+  "title": "Marketing Pipeline State",
+  "description": "State contract for pipeline-state.json. One pipeline instance per file. See references/artifact-contracts.md for how each field is produced and read.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "pipeline_id",
+    "business",
+    "objective",
+    "positioning_input",
+    "business_model",
+    "geography",
+    "constraints",
+    "capabilities",
+    "components",
+    "research",
+    "assets",
+    "campaigns",
+    "measurements",
+    "scheduled_tasks",
+    "approvals",
+    "action_log",
+    "blockers",
+    "current_stage",
+    "created_at",
+    "updated_at"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "pipeline_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable deterministic identifier, e.g. a slug of the business name plus creation date."
+    },
+    "participant_id": {
+      "type": "string",
+      "description": "Optional. Set when the pipeline belongs to one attendee among many (e.g. a workshop cohort)."
+    },
+    "cohort_id": {
+      "type": "string",
+      "description": "Optional. Groups pipelines run together, e.g. a workshop date or a batch."
+    },
+    "business": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "offer"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "offer": { "type": "string", "minLength": 1 }
+      }
+    },
+    "objective": {
+      "type": "string",
+      "description": "The single measurable outcome this pipeline run is built to move, e.g. 'qualified demo requests'."
+    },
+    "positioning_input": {
+      "type": "object",
+      "description": "The upstream positioning contract. See references/positioning-input.md for the full field list.",
+      "additionalProperties": false,
+      "required": ["status", "source", "fields"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["MISSING", "PARTIAL", "ACCEPTED"]
+        },
+        "source": {
+          "type": "string",
+          "enum": ["brand-brief.md", "pasted", "unknown"]
+        },
+        "accepted_at": {
+          "type": ["string", "null"],
+          "description": "UTC ISO 8601 timestamp when positioning_input.status became ACCEPTED."
+        },
+        "fields": {
+          "type": "object",
+          "description": "The 15 required positioning fields. Each value is a string or null when not yet supplied. Never edit positioning.md or brand-brief.md's positioning section to fill these in — ask the user.",
+          "additionalProperties": false,
+          "properties": {
+            "company_or_product_name": { "type": ["string", "null"] },
+            "offer": { "type": ["string", "null"] },
+            "business_model": { "type": ["string", "null"] },
+            "primary_customer_segment": { "type": ["string", "null"] },
+            "problem_or_desired_progress": { "type": ["string", "null"] },
+            "buying_trigger": { "type": ["string", "null"] },
+            "current_alternatives": { "type": ["string", "null"] },
+            "category_or_frame_of_reference": { "type": ["string", "null"] },
+            "approved_value_proposition": { "type": ["string", "null"] },
+            "reasons_to_believe": { "type": ["string", "null"] },
+            "primary_objections": { "type": ["string", "null"] },
+            "messaging_hierarchy": { "type": ["string", "null"] },
+            "voice_rules": { "type": ["string", "null"] },
+            "geography": { "type": ["string", "null"] },
+            "constraints": { "type": ["string", "null"] }
+          }
+        }
+      }
+    },
+    "business_model": {
+      "type": "string",
+      "enum": [
+        "b2b_saas",
+        "b2b_service_or_agency",
+        "ecommerce_d2c",
+        "consumer_application",
+        "local_business",
+        "creator_or_personal_brand",
+        "event_or_community",
+        "marketplace",
+        "nonprofit",
+        "unspecified"
+      ]
+    },
+    "geography": {
+      "type": "string"
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "capabilities": {
+      "type": "object",
+      "description": "Detected at session start. See SKILL.md Stage 1. Absence of a capability is a fact to state, not an error.",
+      "additionalProperties": false,
+      "properties": {
+        "web_research": { "type": "boolean" },
+        "file_write": { "type": "boolean" },
+        "spreadsheet_write": { "type": "boolean" },
+        "crm_read": { "type": "boolean" },
+        "crm_write": { "type": "boolean" },
+        "cms_read": { "type": "boolean" },
+        "cms_write": { "type": "boolean" },
+        "analytics_read": { "type": "boolean" },
+        "analytics_write": { "type": "boolean" },
+        "publishing_write": { "type": "boolean" },
+        "scheduled_tasks": { "type": "boolean" }
+      }
+    },
+    "components": {
+      "type": "object",
+      "description": "One entry per pipeline deliverable. Keys are stable component names, e.g. 'conversion_asset', 'channel_map', 'measurement_plan'.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["state"],
+        "properties": {
+          "state": {
+            "type": "string",
+            "enum": ["MISSING", "DRAFT", "APPROVED", "READY_TO_IMPLEMENT", "LIVE", "MEASURING", "BLOCKED"]
+          },
+          "owner": { "type": "string" },
+          "updated_at": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "research": {
+      "type": "array",
+      "description": "Every consequential research item. See references/evidence-policy.md.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim", "value", "provenance", "retrieved_at", "confidence"],
+        "properties": {
+          "claim": { "type": "string" },
+          "value": { "type": "string" },
+          "provenance": {
+            "type": "string",
+            "enum": ["PROVIDED", "OBSERVED", "SOURCED", "INFERENCE", "ASSUMPTION", "UNKNOWN"]
+          },
+          "source_url": { "type": ["string", "null"] },
+          "retrieved_at": { "type": "string" },
+          "geography": { "type": ["string", "null"] },
+          "applicability": { "type": ["string", "null"] },
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          }
+        }
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "state", "path"],
+        "properties": {
+          "type": { "type": "string" },
+          "state": {
+            "type": "string",
+            "enum": ["MISSING", "DRAFT", "APPROVED", "READY_TO_IMPLEMENT", "LIVE", "MEASURING", "BLOCKED"]
+          },
+          "path": { "type": "string" },
+          "destination": { "type": ["string", "null"] },
+          "verified_at": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "campaigns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["channel", "state"],
+        "properties": {
+          "channel": { "type": "string" },
+          "role": { "type": "string", "enum": ["primary", "supporting", "experiment", "deferred"] },
+          "state": {
+            "type": "string",
+            "enum": ["MISSING", "DRAFT", "APPROVED", "READY_TO_IMPLEMENT", "LIVE", "MEASURING", "BLOCKED"]
+          },
+          "plan_path": { "type": "string" }
+        }
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "north_star": { "type": ["string", "null"] },
+        "funnel": { "type": "string" },
+        "plan_path": { "type": ["string", "null"] },
+        "state": {
+          "type": "string",
+          "enum": ["MISSING", "DRAFT", "APPROVED", "READY_TO_IMPLEMENT", "LIVE", "MEASURING", "BLOCKED"]
+        }
+      }
+    },
+    "scheduled_tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "state"],
+        "properties": {
+          "name": { "type": "string" },
+          "cadence": { "type": "string" },
+          "state": {
+            "type": "string",
+            "enum": ["MISSING", "DRAFT", "APPROVED", "READY_TO_IMPLEMENT", "LIVE", "MEASURING", "BLOCKED"]
+          },
+          "destination": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "approvals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item", "approved_at"],
+        "properties": {
+          "item": { "type": "string" },
+          "approved_at": { "type": "string" },
+          "approved_by": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "action_log": {
+      "type": "array",
+      "description": "Every executed action, per references/execution-policy.md. Append-only.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action", "classification", "timestamp", "result"],
+        "properties": {
+          "action": { "type": "string" },
+          "classification": {
+            "type": "string",
+            "enum": ["READ_ONLY", "REVERSIBLE_DRAFT", "PUBLIC_OR_PERSON_DIRECTED", "FINANCIAL", "DESTRUCTIVE"]
+          },
+          "destination": { "type": ["string", "null"] },
+          "identifier": { "type": ["string", "null"] },
+          "timestamp": { "type": "string" },
+          "result": { "type": "string", "enum": ["success", "failure", "verified"] },
+          "error": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["component", "reason"],
+        "properties": {
+          "component": { "type": "string" },
+          "reason": { "type": "string" },
+          "missing_capability": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "current_stage": {
+      "type": "string",
+      "enum": [
+        "positioning_intake",
+        "research",
+        "copy",
+        "distribution",
+        "measurement",
+        "automation",
+        "launch",
+        "review"
+      ]
+    },
+    "created_at": { "type": "string" },
+    "updated_at": { "type": "string" }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "pipeline_id": "REPLACE_ME",
+  "business": {
+    "name": "",
+    "offer": ""
+  },
+  "objective": "",
+  "positioning_input": {
+    "status": "MISSING",
+    "source": "unknown",
+    "accepted_at": null,
+    "fields": {
+      "company_or_product_name": null,
+      "offer": null,
+      "business_model": null,
+      "primary_customer_segment": null,
+      "problem_or_desired_progress": null,
+      "buying_trigger": null,
+      "current_alternatives": null,
+      "category_or_frame_of_reference": null,
+      "approved_value_proposition": null,
+      "reasons_to_believe": null,
+      "primary_objections": null,
+      "messaging_hierarchy": null,
+      "voice_rules": null,
+      "geography": null,
+      "constraints": null
+    }
+  },
+  "business_model": "unspecified",
+  "geography": "",
+  "constraints": [],
+  "capabilities": {
+    "web_research": false,
+    "file_write": false,
+    "spreadsheet_write": false,
+    "crm_read": false,
+    "crm_write": false,
+    "cms_read": false,
+    "cms_write": false,
+    "analytics_read": false,
+    "analytics_write": false,
+    "publishing_write": false,
+    "scheduled_tasks": false
+  },
+  "components": {
+    "conversion_asset": { "state": "MISSING" },
+    "seo_visibility": { "state": "MISSING" },
+    "channel_map": { "state": "MISSING" },
+    "campaign_plan": { "state": "MISSING" },
+    "measurement_plan": { "state": "MISSING" },
+    "monitoring_task": { "state": "MISSING" },
+    "weekly_report_task": { "state": "MISSING" },
+    "content_brief_task": { "state": "MISSING" }
+  },
+  "research": [],
+  "assets": [],
+  "campaigns": [],
+  "measurements": {
+    "north_star": null,
+    "funnel": "",
+    "plan_path": null,
+    "state": "MISSING"
+  },
+  "scheduled_tasks": [],
+  "approvals": [],
+  "action_log": [],
+  "blockers": [],
+  "current_stage": "positioning_intake",
+  "created_at": "REPLACE_ME",
+  "updated_at": "REPLACE_ME"
+}

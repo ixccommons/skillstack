@@ -1,8 +1,9 @@
 # Copy Flow
 
-Eight steps, roughly 35 minutes. Output is a rewritten hero section, one more
-asset of their choosing, and a page that can actually be found — by search and by
-models answering buying questions.
+Eight steps, roughly 35 minutes, plus a ninth that only runs if the session
+can actually publish. Output is a rewritten hero section, one more asset of
+their choosing, a page that can actually be found — by search and by models
+answering buying questions — and, where possible, that page live.
 
 Run one step per turn. See the pacing section in `SKILL.md`.
 
@@ -11,7 +12,8 @@ pass at the end of the positioning flow first — three questions, ten minutes. 
 and says nothing, which is the condition most homepages are already in.
 
 Open by telling them the shape: audit what they have, rewrite the top of the
-page, pick one more asset, then make it findable. Warn them that step 1 stings.
+page, pick one more asset, make it findable, then — if there's a way to
+actually publish it — ship it. Warn them that step 1 stings.
 
 **Where the copy goes.** Each asset gets its own draft — the homepage draft, the
 ad set, the email sequence — kept separate from the brief. The brief gets the
@@ -264,9 +266,35 @@ is clear pages and third-party mentions.
 
 ---
 
+## Step 9 — Ship it, if the session can
+
+Everything above produces copy a person can publish by hand. If this
+session also has real write access to wherever the page lives — a CMS, a
+site repo, a page builder — and the person wants it live now, this step
+does it, with the same care any publish deserves:
+
+Show the exact destination and the exact final content, once, in full.
+Get an explicit yes to that specific preview — not a general "sounds good"
+given earlier in the conversation. Then publish it, then **read the live
+page back** and confirm it actually matches what was approved before
+saying it's done. If the read-back doesn't match, or the publish fails,
+say so plainly and don't retry more than once.
+
+**If there's no write access to publish it:** the copy above plus the
+implementation checklist from step 5 is the complete deliverable — say so
+plainly, and never describe it as live. A page that's written and ready is
+a real, useful result; it just isn't the same claim as a page that's
+actually up.
+
+**Write to brief:** whether the asset is live (with what was verified) or
+ready to hand off, and to whom.
+
+---
+
 ## Closing the flow
 
-Read back the hero section only. The files hold the rest.
+Read back the hero section only, and whether it's live or ready to publish.
+The files hold the rest.
 
 Then the checkpoint: tell them to post their new headline where the room can see
 it — and next to it, the one it replaced. The pair is more interesting than the
