@@ -211,9 +211,9 @@ Use `scripts/validate_pipeline.py <dir>` to check consistency, and
 None of this is required for positioning, copy, or distribution on their
 own; it exists for people going further.
 
-The flows never name a path themselves beyond what's shown above, so the
-same flow text can run on a platform with no filesystem — see `portable/`
-for the ChatGPT version, which covers positioning, copy, and distribution.
+On a platform with no filesystem these are names rather than paths, and the
+adapter in `portable/instructions.md` says how each one is kept instead —
+see `portable/` for the ChatGPT build, which carries every flow.
 
 ## Pacing
 
@@ -323,14 +323,17 @@ cp -r marketing-workshop .claude/skills/          # this project only
 stage needs them. Invoke it as `/marketing-workshop`, or just describe what
 you want — see Routing above.
 
-**ChatGPT / Custom GPT:** `portable/` runs positioning, copy, and
-distribution — the live-room three — without a skills directory, assuming a
-free account. See `portable/README.md`. Research, measurement, launch, and
-review depend on real tool access (browsing, files, a connected CMS or
-analytics account) that the free-room paste-in mode doesn't have; run those
-in a ChatGPT Project or Custom GPT with `flows/`, `references/`, and
-`templates/` attached as knowledge files, or in an agent that actually has
-the tools.
+**ChatGPT:** where Skills are available (Business, Enterprise, Healthcare
+and Edu — not Free, Plus or Pro), upload `dist/marketing-workshop.zip`.
+Otherwise `portable/` carries all seven flows without a skills directory,
+one paste file per flow, each built from this file plus that flow plus the
+references it cites. See `portable/README.md`.
+
+A free account has `web_research` and nothing else — no file writing, no CMS
+or analytics access, no publishing, no scheduled tasks — so Stage 1 resolves
+the same way every time and nothing reaches `LIVE` from inside the chat.
+That's a capability difference, not a reduced skill: the flows, states and
+gates are the same text there as here.
 
 **Codex, or another `SKILL.md`-compatible agent:** the folder is plain
 markdown, JSON, and Python with no platform-specific syntax in the core

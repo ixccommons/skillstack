@@ -38,7 +38,8 @@ marketing-workshop/
   templates/               starting files for the deeper, automation-capable stages
   scripts/                 init_pipeline.py, validate_pipeline.py, generate_utm.py
   tests/                   unittest coverage for all three scripts
-  portable/                positioning + copy + distribution, for people without Claude
+  portable/                all seven flows again, built from the same source,
+                          for anyone who can't install a skill
 ```
 
 Every flow shares one state file, `brand-brief.md`, written into the working
@@ -74,10 +75,11 @@ Two ways in. Which one you get is decided by the account's plan, not by
 preference:
 
 - **Paste-in / Project / Custom GPT — works on a free account.**
-  `marketing-workshop/portable/` runs positioning, copy, and distribution —
-  the live-room three — with no upload feature needed. This is the workshop
-  route: a room is mostly free accounts, and this is the only one all of them
-  can open. See
+  `marketing-workshop/portable/` carries all seven flows with no upload
+  feature needed. Each paste file is built from the real source — `SKILL.md`
+  verbatim, the references that flow cites, then the flow — so it's the same
+  skill rather than a reduced copy of it. This is the workshop route: a room
+  is mostly free accounts, and it's the only one all of them can open. See
   [`marketing-workshop/portable/README.md`](marketing-workshop/portable/README.md).
 
 - **Native Skills upload — Business, Enterprise, Healthcare and Edu only.**
