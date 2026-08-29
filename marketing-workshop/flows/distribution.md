@@ -1,0 +1,229 @@
+# Distribution Flow
+
+Six steps, roughly 25 minutes. Output is a ranked list of places this segment
+actually is, the message adapted for the top three, a 30-day sequence with dates,
+and two scheduled tasks that keep running after the room empties.
+
+Run one step per turn. See the pacing section in `SKILL.md`.
+
+**Requires positioning, and works much better with copy.** Channels can't be
+ranked without knowing who's being reached, and step 4 adapts an existing message
+rather than inventing one. If there's no copy section in `brand-brief.md`, use
+the value proposition and the three ranked points as the message — that's enough.
+
+Open by telling them the shape: find the places, rank them honestly, adapt the
+message to each room's rules, then commit to a month. And say the hard part up
+front — the answer will be three channels, not fifteen, and that's the point.
+
+## Out of scope, and say so if asked
+
+This flow finds and sequences **channels**. It does not do lead generation,
+outreach lists, cold email, sales calls, or closing — and it does not do social
+media content or posting calendars. If someone asks for those, say plainly that
+they're out of scope for this session, answer in a sentence if you can, and
+return to the step. Both are large enough to eat the remaining time.
+
+---
+
+## Step 1 — Where they already are
+
+**Ask:** Your last five customers — where did each of them come from, and what do
+they read or hang around in?
+
+Start with evidence before speculation. Most people have three or four real data
+points and have never lined them up, and the pattern is usually clearer than
+whatever channel strategy they'd have guessed at.
+
+Then find the rest by searching, not from memory. Useful searches: the segment
+name plus "community" or "forum" or "slack"; the problem phrased as they'd
+phrase it, to see which threads and subreddits surface; the main competitor's
+name, to see where people discuss it; "best [category] newsletter". The
+comparison threads from the copy flow's step 8 are also channels.
+
+**Push back on:** "everyone's on LinkedIn" and other channel answers that are
+really demographic answers. The question is where this segment goes when they
+have this problem, which is often somewhere small and specific.
+
+**Write to brief:** where the last five came from, and what the pattern is.
+
+---
+
+## Step 2 — The long list
+
+Build fifteen to twenty candidates across all seven types. Work the types
+explicitly — people list the two they already know and stop, and the ones they
+skip are usually the ones that would have worked.
+
+- **Communities** — Slack and Discord groups, private forums, membership groups.
+  Small, high trust, and usually the highest converting per person reached.
+- **Forums** — Reddit, Hacker News, Stack Overflow, niche boards. Public, search-
+  indexed, and the posts keep working for years.
+- **Newsletters** — the ones this segment reads. Sponsorship, a guest piece, or
+  just being mentioned. Small lists in narrow niches beat large general ones.
+- **Directories and listing sites** — category directories, review sites, "awesome
+  X" lists, comparison sites. The most under-used type on this list: low effort,
+  permanent, and they feed the AI-answer visibility from the copy flow.
+- **Marketplaces and integration listings** — app stores, plugin registries,
+  partner directories. If the product plugs into something, that something has a
+  directory with intent-heavy traffic.
+- **Publications** — trade press, industry blogs, podcasts that take guests.
+  Slow, but a single well-placed piece outlives a quarter of posting.
+- **Events** — meetups, conferences, virtual panels, and other people's webinars.
+  Highest effort per person reached, and the best for a product that needs a
+  conversation to explain.
+
+For each candidate get the name, roughly how big it is, and whether they can post
+at all — some communities ban vendor posts outright, and finding that out now is
+cheaper than finding out after being banned.
+
+**Push back on:** channels chosen because they're comfortable rather than because
+the segment is there.
+
+**Write to brief:** the long list, grouped by type.
+
+---
+
+## Step 3 — Rank
+
+Score every candidate on three things, one to five:
+
+- **Fit** — what share of that audience is the primary segment. A newsletter with
+  2,000 readers who are all the segment beats one with 80,000 who mostly aren't.
+- **Effort** — hours to a first credible appearance, including any waiting.
+  Score it *inverted*, so five means cheap. A directory listing is an hour; a
+  conference talk is a proposal, a rejection, and three months.
+- **Permission** — can they post, and what does the room allow. Five is "we're
+  welcome here", one is "vendors get removed".
+
+Multiply fit by effort by permission. The order that comes out is usually not the
+order they expected, and directories usually come out higher than anyone likes.
+
+Then pick **three**. Not five.
+
+Say why plainly: one channel worked weekly for a month beats six touched once.
+Every channel has a ramp where the first three attempts underperform because
+nobody knows you yet, and a channel abandoned at attempt two only ever pays the
+ramp cost. Three is the most a person doing this alongside their actual job can
+sustain.
+
+Rank the three: one to go deep on, one to run in parallel, one to test.
+
+**Push back on:** keeping a channel because it's prestigious. Also on dropping a
+high-scoring channel because it feels unglamorous — the directory that takes an
+hour and pays out for two years is the correct answer even though nobody enjoys
+hearing it.
+
+**Write to brief:** the scored table, and Channels chosen in the header.
+
+---
+
+## Step 4 — Adapt the message
+
+The same message posted identically to three places fails in at least two. Each
+room has a form that's rewarded and a form that gets you removed.
+
+For each of the three, work out:
+
+- **What the room is for.** A forum rewards a specific answer to somebody's
+  actual question. A directory rewards a clear first sixty characters. A
+  newsletter's readers signed up for the writer's voice, not yours.
+- **Who's talking.** A person with a name, or a company. In communities it's
+  almost always a person, and a company account posting where people expect a
+  person is the most common own goal in this whole flow.
+- **How the product is allowed to come up.** Directly, in a signature, only when
+  asked, or in a designated channel on a designated day.
+- **The length and the format.** Read three recent successful posts before
+  writing anything. If the room's posts are four sentences, a thousand words
+  reads as an advertisement no matter what it says.
+
+Then **write the first actual post for the top-ranked channel** — the real text,
+in the voice rules from positioning, sized to that room. Not a template. This is
+the deliverable of the step, and it's what makes the next month start on Monday
+instead of "soon".
+
+**Push back on:** the homepage headline pasted into a community. The value
+proposition is the thing being communicated; the sentence is different in every
+room.
+
+**Write to brief:** the rules of the room for each channel, and the first post
+in full.
+
+---
+
+## Step 5 — The 30-day sequence
+
+**Ask:** How many hours a week does this actually get?
+
+Then build the month against that number, honestly. Most people say five and have
+two. Two real hours a week beats a plan for five that stops on day nine.
+
+The shape that works:
+
+- **Week 1 — the permanent stuff.** Every directory and listing from the long
+  list, not just the top three. This is the one week of pure effort that keeps
+  paying, it's all low-risk, and it front-loads a visible win.
+- **Week 2 — show up in channel one.** Not posting about the product. Answering
+  questions, being present, learning the form. The first post from step 4 goes
+  out here.
+- **Week 3 — the substantial thing.** The guest piece, the comparison page, the
+  newsletter pitch, the talk proposal. One item, scheduled, with a name against
+  it.
+- **Week 4 — channel two, and repeat what worked.** Add the parallel channel and
+  do week 2's best-performing thing again.
+
+Two rules. **One repeating slot** — a fixed hour on a fixed day, in the calendar,
+because unscheduled distribution doesn't happen. And **no more than two new
+channels in the month**; the third from step 3 is a test for month two.
+
+Each item needs a day, an owner, and a definition of done. "Post in the community"
+is not a task; "Tuesday, answer three questions in #help, no product links" is.
+
+**Push back on:** plans with something happening every day. They fail in week
+two, and the failure usually takes the whole plan with it.
+
+**Write to brief:** the four weeks with dates, and the repeating slot.
+
+---
+
+## Step 6 — Make it keep running
+
+The month survives if it doesn't depend on remembering. Set up two or three
+scheduled tasks now — the setup is the step, not a description of the setup.
+
+- **A monitoring task.** Daily or weekly: search the chosen channels and the
+  competitor names for mentions of the problem, the category, and them. Output a
+  short list of threads worth answering, with links. This is what makes forum
+  presence sustainable — the alternative is remembering to go and look, which
+  nobody does past week two.
+- **A weekly report.** One message on a fixed day: what went out, what came back,
+  what's due this week from the 30-day plan. Short enough to read on a phone.
+- **A content brief generator.** Given a keyword or a question from the copy
+  flow's step 6 list, produce an outline with the angle, the sections, the
+  evidence needed, and the internal links — so the substantial item in week 3
+  starts from a brief rather than a blank page.
+
+Write each as an actual scheduled task with its prompt, its schedule, and where
+its output goes. Say plainly which are set up and which are ideas — a task
+described but never created is worth nothing on day eight.
+
+If the tooling for scheduled tasks isn't available in the room, write the three
+prompts to `tasks/` so they can be set up later, and say that's what happened.
+
+**Write to brief:** the tasks created, with schedules.
+
+---
+
+## Closing the flow
+
+Read back the three channels and the repeating slot. Nothing else.
+
+Then the checkpoint: tell them to post their top three channels where the room
+can see it. This one is the most useful checkpoint of the day for everyone else,
+because channel discoveries transfer between businesses in a way that positioning
+and copy don't — someone else in the room is selling to a neighbouring segment
+and has never heard of half the list.
+
+Then close the loop: the brief now holds the position, the copy, and the plan.
+It's the input to everything they build after this, and it's the thing that
+stops the next piece of copy drifting off the position they spent the morning
+building.
