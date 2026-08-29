@@ -7,7 +7,10 @@ Agent skills, one directory each.
 Takes a product from an undefined position to a running, measured marketing
 pipeline — one skill, one running brief. Positioning, copy, and distribution
 are built for a live workshop, one step at a time, so attendees do the
-thinking rather than watch generated text scroll past. Research, measurement,
+thinking rather than watch generated text scroll past. Positioning follows
+Al Ries and Jack Trout's *Positioning: The Battle for Your Mind* — the
+category ladder, the word the leader owns, the hole nobody stands in, and a
+message short enough to survive in a crowded head. Research, measurement,
 launch, and review pick up from there — deep competitor and customer
 research, UTM tracking and measurement, automated execution where the host
 agent's tools allow it, launch verification, and weekly review. No lead
@@ -26,6 +29,7 @@ marketing-workshop/
                           completion gate — the whole process in one file
   flows/
     positioning.md       8 steps · ~40 min · + a 10-minute express pass
+                          method: Ries & Trout, Positioning
     copy.md               8 steps · ~35 min · + a 9th if the session can publish
     distribution.md       6 steps · ~25 min
     research.md           deep competitor / customer / channel-seed research
