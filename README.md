@@ -70,10 +70,20 @@ invoke it as `/marketing-workshop`, or just describe what you want.
 
 ### On ChatGPT
 
-Two ways in, depending on what's available on the account:
+Two ways in. Which one you get is decided by the account's plan, not by
+preference:
 
-- **Native skill upload** (`chatgpt.com/skills` → drag in a `.zip`): the whole
-  skill, prebuilt at
+- **Paste-in / Project / Custom GPT — works on a free account.**
+  `marketing-workshop/portable/` runs positioning, copy, and distribution —
+  the live-room three — with no upload feature needed. This is the workshop
+  route: a room is mostly free accounts, and this is the only one all of them
+  can open. See
+  [`marketing-workshop/portable/README.md`](marketing-workshop/portable/README.md).
+
+- **Native Skills upload — Business, Enterprise, Healthcare and Edu only.**
+  Skills aren't in the Free, Plus or Pro rollout, and on managed workspaces an
+  admin may have to enable them first (sidebar → Plugins → Skills). Where it
+  is available it takes the whole skill, all seven flows, prebuilt at
   [`marketing-workshop/dist/marketing-workshop.zip`](marketing-workshop/dist/marketing-workshop.zip).
   It's a generated file — never edit it by hand. After changing anything
   under `marketing-workshop/` (other than `dist/`), rebuild and commit it:
@@ -83,11 +93,9 @@ Two ways in, depending on what's available on the account:
   python3 marketing-workshop/scripts/build_skill_zip.py --check  # verify, change nothing
   ```
 
-- **Paste-in / Project / Custom GPT, no upload feature needed:**
-  `marketing-workshop/portable/` runs positioning, copy, and distribution —
-  the live-room three — as a paste-in prompt, a Project, or a Custom GPT,
-  assuming a free account. See
-  [`marketing-workshop/portable/README.md`](marketing-workshop/portable/README.md).
+  Plan boundaries move — check
+  [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
+  before building a session around this route.
 
 Either way, research, measurement, launch, and review depend on real tool
 access (browsing, files, a connected account) that a given ChatGPT session

@@ -3,6 +3,10 @@
 The skill in `../SKILL.md` only loads on Claude. Most attendees won't have it, so
 the same flows run three other ways here.
 
+ChatGPT's own Skills feature would carry the whole skill, `dist/` zip and all —
+but it's a Business / Enterprise / Healthcare / Edu feature, not in the Free,
+Plus or Pro rollout, so it can't reach a room. That's what this directory is for.
+
 **These assume a free ChatGPT account** — that's what a room actually has, and
 designing for Plus produces a session where a third of the people can't follow
 along. Everything below degrades on purpose rather than by accident.
