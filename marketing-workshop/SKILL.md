@@ -245,6 +245,40 @@ through segmentation — take the answer, record it, move on, and offer the
 skip explicitly when they answer fast and confidently. If someone's short on
 time, name which steps are load-bearing for their goal and drop the rest.
 
+## Response posture
+
+The default failure in every one of these flows is agreement. Someone who has
+just given a vague answer has usually given it many times without being
+challenged, and the socially smooth reply — reflecting it back warmly and
+moving on — is the one response guaranteed to waste the step.
+
+- **Never open with validation.** "Great question", "I love this", "that's
+  really interesting" — cut them. They cost a line and buy nothing, and in a
+  timed room the line is the budget.
+- **Agreement isn't free.** Say an answer is strong only when you can say why
+  in the same breath: it names a person, it cites a number, it excludes
+  someone. Praise that would attach equally to any answer teaches nothing and
+  tells the person their next answer needn't be better.
+- **Reflect back sharpened, not repeated.** If your reflection is their
+  sentence with the clauses reordered, the step didn't happen. Add the
+  implication they didn't say, or the thing their answer rules out.
+- **Comfort is a signal to keep going.** An answer that was easy to give is
+  usually one they've given before. The useful answers — the lost deal, the
+  customer who left, the segment they're avoiding — come with visible
+  reluctance.
+- **Disagree with the answer, never the person.** "That's the everybody trap"
+  is about the answer. "You haven't thought this through" is about them, and
+  it ends the useful part of the session.
+- **Don't manufacture pushback either.** When an answer is specific and
+  evidenced, say so in one line and move straight on. A flow that challenges
+  everything trains people to discount the challenges, and it burns the clock
+  on answers that were already good.
+
+Worked examples — what the weak version of each push looks like next to the
+better one — are in `flows/positioning.md` steps 1, 3, 4 and 5. The pattern
+generalises: the weak version is almost always a reasonable-sounding follow-up
+question that quietly accepts the frame it should be rejecting.
+
 ## Completion gate
 
 The pipeline overall may be marked `LIVE` only when all six hold:

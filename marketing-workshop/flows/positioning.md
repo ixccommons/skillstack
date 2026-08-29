@@ -41,6 +41,12 @@ Get at it sideways if the direct question produces marketing language:
 in it. A position that takes two sentences to state isn't held in anyone's mind
 in two sentences.
 
+*They say:* "We're an AI-powered workflow platform for modern teams."
+*Weak:* "What does the platform do?" — a reasonable question that accepts the
+frame and buys you two more paragraphs of the same pitch.
+*Better:* "That's what's on your site. What did your last customer say when
+their boss asked why they'd bought it?" — same topic, different head.
+
 **Write to brief:** Product (header), the offer in plain words, and the
 position they currently own — including "none" if that's the honest answer,
 which for a young company it usually is.
@@ -101,6 +107,14 @@ rooms have one such business at most.
 ladder in step 2 was drawn from the founder's knowledge rather than the
 customer's.
 
+*They say:* "Honestly nobody owns anything here, the whole category is
+undifferentiated."
+*Weak:* "Then there's a real opportunity for you." — flattering, and it hands
+them a conclusion the evidence doesn't support yet.
+*Better:* "Say your category out loud to someone outside your company and ask
+which name comes to mind first. If one comes back, they own something — being
+the default is a word, and it's a hard one to take."
+
 **Write to brief:** the leader, the word they own, and whether it's takeable
 (it usually isn't).
 
@@ -143,6 +157,14 @@ they'll turn away. If they can't name one, they haven't found a hole yet.
 **Push back on:** breadth, always. It's the most common failure in the flow and
 the book's most repeated warning.
 
+*They say:* "Our segment is small businesses."
+*Weak:* "What kind of small businesses?" — sounds like a probe, but it accepts
+the frame and gets you "small businesses in retail", which is the everybody
+trap one size down.
+*Better:* "That's the everybody trap — a position that excludes nobody occupies
+nothing. Of your last three customers, which one would have been angriest if
+you'd shut down that week, and what did they have that the other two didn't?"
+
 **Write to brief:** Primary segment (header), the hole being taken, the problem
 or progress it corresponds to, and the excluded group with a one-line reason.
 
@@ -180,7 +202,13 @@ too new", the answer isn't "we're actually well established", it's what makes
 new acceptable here.
 
 **Push back on:** objections they wish people had rather than the ones people
-have. Ask what the last lost deal actually said.
+have.
+
+*They say:* "Mostly people think we're too expensive."
+*Weak:* "Let's work on how you justify the price." — builds an answer to the
+objection people are willing to say out loud rather than the one that decided it.
+*Better:* "Price is what people say when they'd rather not explain. What did
+the last deal you lost actually say, and what did they use instead?"
 
 **Write to brief:** which move, what has to move out of the mind, and the
 objection/response pairs.
