@@ -145,7 +145,7 @@ come back and ask for the whole pipeline from here, or vice versa.
 
 | Flow | Covers | File | Pacing |
 |---|---|---|---|
-| Positioning | Segment, competitors, gap, value proposition, messaging, objections, voice | `flows/positioning.md` | one step per turn |
+| Positioning | The ladder, the leader's word, the hole, the one word and the sentence, objections, the name, voice | `flows/positioning.md` | one step per turn |
 | Copy | Homepage, landing pages, ads, email, one-pagers, SEO, AI-answer visibility | `flows/copy.md` | one step per turn |
 | Distribution | Channel discovery, ranking, message fit, 30-day plan, scheduled tasks | `flows/distribution.md` | one step per turn |
 | Research | Deep competitor, pricing, customer-language, and channel-seed research | `flows/research.md` | one decision per turn |
@@ -482,18 +482,18 @@ fields directly). Same contract, no file.
 | # | Field | Typically found at |
 |---|---|---|
 | 1 | Company or product name | Brief header / product baseline |
-| 2 | Offer | Product baseline (positioning step 1) |
+| 2 | Offer | Positioning step 1 (the position you own now) |
 | 3 | Business model | Not always explicit in the brief — see below |
-| 4 | Primary customer segment | Brief header, positioning step 2 |
-| 5 | Problem or desired progress | Positioning step 2 |
+| 4 | Primary customer segment | Brief header, positioning step 4 (the hole) |
+| 5 | Problem or desired progress | Positioning step 4 (the hole) |
 | 6 | Buying trigger | Not always explicit — ask if missing |
-| 7 | Current alternatives | Positioning step 3 |
-| 8 | Category or frame of reference | Brief header, positioning step 3 |
-| 9 | Approved value proposition | Brief header, positioning step 5 |
+| 7 | Current alternatives | Positioning step 2 (the ladder) |
+| 8 | Category or frame of reference | Brief header, positioning step 2 (the ladder) |
+| 9 | Approved value proposition | Brief header, positioning step 6 (the message) |
 | 10 | Reasons to believe | Positioning step 6 (the ranked points + evidence) |
-| 11 | Primary objections | Positioning step 7 |
-| 12 | Messaging hierarchy | Positioning step 6 |
-| 13 | Voice rules | Positioning step 8 |
+| 11 | Primary objections | Positioning step 5 (what must move out of the mind) |
+| 12 | Messaging hierarchy | Positioning step 6 (the message) |
+| 13 | Voice rules | Positioning step 8 (do you match your position) |
 | 14 | Geography | Not always explicit — ask if missing |
 | 15 | Constraints | Not always explicit — ask if missing (budget, timeline, regulatory, brand) |
 

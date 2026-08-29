@@ -145,7 +145,7 @@ come back and ask for the whole pipeline from here, or vice versa.
 
 | Flow | Covers | File | Pacing |
 |---|---|---|---|
-| Positioning | Segment, competitors, gap, value proposition, messaging, objections, voice | `flows/positioning.md` | one step per turn |
+| Positioning | The ladder, the leader's word, the hole, the one word and the sentence, objections, the name, voice | `flows/positioning.md` | one step per turn |
 | Copy | Homepage, landing pages, ads, email, one-pagers, SEO, AI-answer visibility | `flows/copy.md` | one step per turn |
 | Distribution | Channel discovery, ranking, message fit, 30-day plan, scheduled tasks | `flows/distribution.md` | one step per turn |
 | Research | Deep competitor, pricing, customer-language, and channel-seed research | `flows/research.md` | one decision per turn |
@@ -518,7 +518,8 @@ Give them three shapes to choose between, and write one of each:
 2. **Outcome** — the state the customer ends up in. Needs to be specific enough
    to be falsifiable.
 3. **Against the alternative** — pointed at what's currently winning. Highest
-   risk, highest recall, only works if the gap from positioning step 4 is real.
+   risk, highest recall, only works if the hole taken in positioning step 4 is
+   real.
 
 Have them pick one and say why. The subhead carries what the headline dropped —
 usually the segment or the mechanism, never both.
@@ -707,7 +708,7 @@ distribution comes next rather than being optional.
 
 **The test:** ask a model the question a buyer would ask — "best X for Y" — and
 read the answer together. Whatever it names instead of them is the real
-competitive set, and it's often not the one from positioning step 3.
+competitive set, and it's often not the ladder drawn in positioning step 2.
 
 **Push back on:** anyone wanting tricks. Prompt-injection text hidden on a page
 is worthless and gets the domain distrusted. There is no shortcut here; the work

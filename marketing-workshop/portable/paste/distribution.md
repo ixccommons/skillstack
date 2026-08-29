@@ -145,7 +145,7 @@ come back and ask for the whole pipeline from here, or vice versa.
 
 | Flow | Covers | File | Pacing |
 |---|---|---|---|
-| Positioning | Segment, competitors, gap, value proposition, messaging, objections, voice | `flows/positioning.md` | one step per turn |
+| Positioning | The ladder, the leader's word, the hole, the one word and the sentence, objections, the name, voice | `flows/positioning.md` | one step per turn |
 | Copy | Homepage, landing pages, ads, email, one-pagers, SEO, AI-answer visibility | `flows/copy.md` | one step per turn |
 | Distribution | Channel discovery, ranking, message fit, 30-day plan, scheduled tasks | `flows/distribution.md` | one step per turn |
 | Research | Deep competitor, pricing, customer-language, and channel-seed research | `flows/research.md` | one decision per turn |
