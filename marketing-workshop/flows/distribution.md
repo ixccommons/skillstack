@@ -34,6 +34,15 @@ Start with evidence before speculation. Most people have three or four real data
 points and have never lined them up, and the pattern is usually clearer than
 whatever channel strategy they'd have guessed at.
 
+**With no customers yet**, ask the nearest real thing instead: who are the last
+five people you had a genuine conversation about this with, and where did you
+find them? Design partners, people who replied to a message, someone met at an
+event. Those are real data points about where this segment is reachable, and
+they beat a guess. If there aren't five conversations either, say plainly that
+step 2 will be built from search rather than evidence — that's a weaker input
+and the ranking in step 3 should be treated as a hypothesis to test, not a
+finding.
+
 Then find the rest by searching, not from memory. Useful searches: the segment
 name plus "community" or "forum" or "slack"; the problem phrased as they'd
 phrase it, to see which threads and subreddits surface; the main competitor's

@@ -505,6 +505,23 @@ ad set, the email sequence — kept separate from the brief. The brief gets the
 hero section and the decisions, because that's the part later flows and other
 people need to read; long copy in the brief buries the header.
 
+## Starting from nothing
+
+Some people arrive with no site, no page, and nothing written down but the brief
+they made an hour ago. The flow still runs — and in some ways runs better,
+because there's no existing page fighting the new position. Four steps change:
+
+- **Step 1** becomes a decision instead of a diagnosis. Nothing to audit, so the
+  useful work is settling what the page has to *do*.
+- **Step 3** has no numbers to attach. Substitutes are listed there.
+- **Step 5**'s branch narrows: ads need budget and email sequences need a list.
+- **Step 8** gets more interesting, not less. See the note there.
+
+Everything else runs unchanged. Don't apologise for the missing page or treat
+them as a special case out loud — someone with nothing to rewrite is in a better
+position than someone with three years of copy built on a segment they abandoned
+an hour ago.
+
 ---
 
 ## Step 1 — Audit against the position
@@ -529,10 +546,21 @@ the gap themselves.
 just built and the page they already have is the most useful thing in the flow.
 Name it plainly, then move.
 
-If someone has no site yet, ask for their current one-line description instead —
-the email signature, the deck slide, whatever they say at events. Audit that.
+**If there's no page yet**, don't force an audit. Ask two things instead:
 
-**Write to brief:** three bullets on what the current page gets wrong.
+1. **What's the one action a visitor takes?** Buy, book a call, request a demo,
+   join a waitlist, install something. One. An existing site has answered this
+   by accident; a new page most often ducks it by offering three equal buttons.
+2. **What happens immediately after they take it?** If the honest answer is "I
+   get an email and reply when I can", put that on the page — "I'll reply within
+   a day" converts better than an implied automated flow that isn't built.
+
+If they have a verbal description they already use — the email signature, the
+deck slide, the sentence they say at events — audit that instead. It's copy; it
+just hasn't been typed.
+
+**Write to brief:** three bullets on what the current page gets wrong — or, with
+no page, the conversion action and what happens after it.
 
 ---
 
@@ -588,6 +616,14 @@ One idea per section. The most common homepage failure is a page that says nine
 things at equal volume, which reads as saying nothing. If they want a fourth
 point, ask which of the three it replaces.
 
+**With no customers yet**, there are no numbers to attach, and inventing them is
+the one unrecoverable mistake on this page. What counts as evidence pre-launch:
+a demonstration or screenshot of the thing working, a mechanism described
+concretely enough to be checkable, a design partner's own words, the founder's
+relevant track record. What doesn't: adjectives standing in for proof, and any
+number that hasn't happened yet. Then ask which piece of real evidence they'll
+add first — that's the page's next edit, and it belongs in the brief.
+
 **Push back on:** sections that describe features the reader hasn't been given a
 reason to care about yet. Order is claim, then evidence, then mechanism — never
 mechanism first.
@@ -628,6 +664,11 @@ page and which were held back for sales.
 ## Step 5 — One more asset
 
 **Ask:** Which of these is the thing you'd actually ship this week?
+
+Pre-launch, steer rather than offer: **D** if they need something to send to
+people they're already talking to, **A** if they need somewhere to send traffic
+and hold interest. Ads and email sequences presuppose budget and a list, and
+building either now produces an asset that sits unused.
 
 Offer four. Do one properly rather than four badly — this step is five minutes,
 and a half-written email sequence gets deleted the moment the workshop ends.
@@ -743,6 +784,12 @@ distribution comes next rather than being optional.
 **The test:** ask a model the question a buyer would ask — "best X for Y" — and
 read the answer together. Whatever it names instead of them is the real
 competitive set, and it's often not the ladder drawn in positioning step 2.
+
+**With nothing published, run this test anyway** — it's more useful here than
+anywhere else. The model won't name them, which isn't the finding. The finding
+is what it *does* name, in what order, and which of those they'd never have put
+on their own ladder. That's the rung they're joining and the vocabulary the
+category already uses, arrived at before a single page exists.
 
 **Push back on:** anyone wanting tricks. Prompt-injection text hidden on a page
 is worthless and gets the domain distrusted. There is no shortcut here; the work
