@@ -14,6 +14,18 @@ side, a consumer app with a subscription), pick the row that governs the
 *objective this pipeline run is built for*, and note the secondary model in
 `constraints`.
 
+**A talent, label, or representation business** — a music label, a talent
+agency, a management company — is this kind of split by nature: one side is
+the people it serves directly (artists, talent), the other is the audience
+it builds for them (listeners, viewers, fans). It is not a `marketplace`
+unless it actually matches and transacts between the two sides; more often
+it's `b2b_service_or_agency` toward the talent (that's who it's paid by or
+accountable to) with a `creator_or_personal_brand`-shaped audience-growth
+motion layered on top for the objective this pipeline run is actually
+about. Pick the row by asking which side this run is meant to move — grow
+the roster, or grow an artist's listenership — and note the other in
+`constraints` rather than trying to serve both funnels in one pass.
+
 ---
 
 ### B2B SaaS — `b2b_saas`

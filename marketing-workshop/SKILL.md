@@ -1,6 +1,6 @@
 ---
 name: marketing-workshop
-description: Runs a founder or marketer through a real product's marketing, end to end — positioning (the category ladder, the hole nobody owns, the one word, brand voice — Ries and Trout's method), copy (homepage, landing pages, ads, email, SEO), distribution (channel discovery, ranking, 30-day plan), and everything after that: deep research, measurement and tracking, automated execution where tools exist, scheduled monitoring, launch verification, and weekly review. Use this skill whenever someone wants to work on their positioning, write or rewrite marketing copy, find where their customers are, set up tracking, launch a campaign, review this week's numbers, asks what word they own or which ladder they're on, or asks to "run the positioning flow", "do the copy flow", "go through the channel map", "build my marketing pipeline", "run the whole thing", or names any part of the Coffee with Claude workshop. Also use it for value proposition, homepage copy, ad headlines, competitor analysis, brand voice, channel strategy, UTM tracking, or launch readiness, even if the request doesn't name a flow or a workshop.
+description: Runs a founder or marketer through a real product's marketing, end to end — positioning (the category ladder, the hole nobody owns, the one word, brand voice — Ries and Trout's method), copy (homepage, landing pages, ads, email, SEO), distribution (channel discovery, ranking, 30-day plan), and everything after that: deep research, measurement and tracking, automated execution where tools exist, scheduled monitoring, launch verification, and weekly review. Use this skill whenever someone wants to work on their positioning, write or rewrite marketing copy, find where their customers are, set up tracking, launch a campaign, review this week's numbers, asks what word they own or which ladder they're on, or asks to "run the positioning flow", "do the copy flow", "go through the channel map", "build my marketing pipeline", "run the whole thing", "run the 3-hour workshop", or names any part of the Coffee with Claude workshop. Also use it for value proposition, homepage copy, ad headlines, competitor analysis, brand voice, channel strategy, UTM tracking, or launch readiness, even if the request doesn't name a flow or a workshop.
 ---
 
 # Marketing Workshop
@@ -26,20 +26,55 @@ means concretely.
 that flow runs, the same as always.
 
 **The whole pipeline.** Ask to "build my marketing pipeline," "run the whole
-thing," or similar, and this skill runs positioning through launch as one
-session: it asks the questions each stage genuinely needs (starting with
-whatever's missing from positioning), does real research rather than
-guessing, drafts and adapts copy, ranks and sequences channels, sets up
-measurement, executes what the session's tools allow, and ends by handing
-back an honest state — a working `READY_TO_IMPLEMENT` or `LIVE` pipeline,
-never a claim past what actually happened. It still stops at every
-consequential decision (an angle, a channel ranking, a launch go/no-go) and
-waits for a real answer — "the whole pipeline" means one continuous session
-and one running brief, not fewer decisions in the person's hands.
+thing," "run the 3-hour workshop," or similar, and this skill runs
+positioning through launch as one session from that single request: it asks
+the questions each stage genuinely needs (starting with whatever's missing
+from positioning), does real research rather than guessing, drafts and
+adapts copy, ranks and sequences channels, sets up measurement, executes
+what the session's tools allow, and ends by handing back an honest state —
+a working `READY_TO_IMPLEMENT` or `LIVE` pipeline, never a claim past what
+actually happened. It still stops at every consequential decision (an angle,
+a channel ranking, a launch go/no-go) and waits for a real answer — "the
+whole pipeline" means one continuous session and one running brief, not
+fewer decisions in the person's hands.
 
 Either way, `brand-brief.md` is the same file, so switching between the two
 mid-project costs nothing — a person who ran positioning alone last week can
 come back and ask for the whole pipeline from here, or vice versa.
+
+### The 3-hour room version
+
+This is the default timing for the whole-pipeline trigger in a live workshop
+— the room this skill was built for. State it up front so people know the
+shape: by roughly the 2 to 2.5 hour mark, everyone leaves with something
+real, not a plan for later — a page that's live or exactly ready to paste
+in, a channel action that's posted or queued, tracking links already
+generated, and an honest live/not-live verdict with named blockers if it
+isn't live yet.
+
+| Time | Block | What exists by the end of it |
+|---|---|---|
+| 0:00–0:05 | Open, capability check | Stage 1 run once for the room; say plainly what "real" means by 2–2.5h |
+| 0:05–0:45 | Positioning (40 min) | The word, the sentence, voice rules |
+| 0:45–1:20 | Copy (35 min) | Hero + one asset, published if `cms_write`/`publishing_write` exist, else exact paste-ready copy |
+| 1:20–1:45 | Distribution (25 min) | Top 3 channels ranked, first post live if `publishing_write` exists, else ready to post |
+| 1:45–2:05 | Measurement (20 min) | North star named, UTM links generated for every campaign-plan destination |
+| 2:05–2:20 | Launch preflight (15 min) | The gate run for real — `LIVE` or `READY_TO_IMPLEMENT` with named blockers, per person |
+| 2:20–2:45 | Automation + stragglers | Scheduled tasks set up where `scheduled_tasks` exists; catch anyone still mid-flow |
+| 2:45–3:00 | Wrap | Checkpoint round, and a review date set for next week |
+
+**Research doesn't get its own block here** — at this pace it folds into the
+search work positioning step 2–3 and copy step 6 already do inline, per
+"Order and dependencies" above. Run research as its own step only when there's
+real slack in the room or the session isn't time-boxed at all. **Review
+doesn't run same-day either** — there's no week of data yet — the wrap block
+only sets the date and cadence for it.
+
+Outside a timed room (Claude Code with no clock, a ChatGPT Project, someone
+working solo), this table is a default, not a constraint — follow "Skipping
+and time" below instead: name the load-bearing steps for whatever time is
+actually available and drop the rest, rather than forcing this exact
+schedule.
 
 ## The flows
 
@@ -75,8 +110,10 @@ Most people won't name a flow. Map what they ask for:
   **launch**
 - "how did this week go" / "should I keep doing this" / "review the
   campaign" → **review**
-- "build my marketing pipeline" / "run the whole thing" / "take this from
-  positioning to launch" → **the whole pipeline**, per the section above
+- "build my marketing pipeline" / "run the whole thing" / "run the 3-hour
+  workshop" / "take this from positioning to launch" → **the whole
+  pipeline**, per the section above — a single request that starts the
+  entire positioning-through-launch session
 
 If it's ambiguous ("help me with my marketing"), don't guess — name the
 options in one line each and ask which. If someone mid-flow asks something

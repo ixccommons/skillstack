@@ -126,20 +126,55 @@ means concretely.
 that flow runs, the same as always.
 
 **The whole pipeline.** Ask to "build my marketing pipeline," "run the whole
-thing," or similar, and this skill runs positioning through launch as one
-session: it asks the questions each stage genuinely needs (starting with
-whatever's missing from positioning), does real research rather than
-guessing, drafts and adapts copy, ranks and sequences channels, sets up
-measurement, executes what the session's tools allow, and ends by handing
-back an honest state — a working `READY_TO_IMPLEMENT` or `LIVE` pipeline,
-never a claim past what actually happened. It still stops at every
-consequential decision (an angle, a channel ranking, a launch go/no-go) and
-waits for a real answer — "the whole pipeline" means one continuous session
-and one running brief, not fewer decisions in the person's hands.
+thing," "run the 3-hour workshop," or similar, and this skill runs
+positioning through launch as one session from that single request: it asks
+the questions each stage genuinely needs (starting with whatever's missing
+from positioning), does real research rather than guessing, drafts and
+adapts copy, ranks and sequences channels, sets up measurement, executes
+what the session's tools allow, and ends by handing back an honest state —
+a working `READY_TO_IMPLEMENT` or `LIVE` pipeline, never a claim past what
+actually happened. It still stops at every consequential decision (an angle,
+a channel ranking, a launch go/no-go) and waits for a real answer — "the
+whole pipeline" means one continuous session and one running brief, not
+fewer decisions in the person's hands.
 
 Either way, `brand-brief.md` is the same file, so switching between the two
 mid-project costs nothing — a person who ran positioning alone last week can
 come back and ask for the whole pipeline from here, or vice versa.
+
+### The 3-hour room version
+
+This is the default timing for the whole-pipeline trigger in a live workshop
+— the room this skill was built for. State it up front so people know the
+shape: by roughly the 2 to 2.5 hour mark, everyone leaves with something
+real, not a plan for later — a page that's live or exactly ready to paste
+in, a channel action that's posted or queued, tracking links already
+generated, and an honest live/not-live verdict with named blockers if it
+isn't live yet.
+
+| Time | Block | What exists by the end of it |
+|---|---|---|
+| 0:00–0:05 | Open, capability check | Stage 1 run once for the room; say plainly what "real" means by 2–2.5h |
+| 0:05–0:45 | Positioning (40 min) | The word, the sentence, voice rules |
+| 0:45–1:20 | Copy (35 min) | Hero + one asset, published if `cms_write`/`publishing_write` exist, else exact paste-ready copy |
+| 1:20–1:45 | Distribution (25 min) | Top 3 channels ranked, first post live if `publishing_write` exists, else ready to post |
+| 1:45–2:05 | Measurement (20 min) | North star named, UTM links generated for every campaign-plan destination |
+| 2:05–2:20 | Launch preflight (15 min) | The gate run for real — `LIVE` or `READY_TO_IMPLEMENT` with named blockers, per person |
+| 2:20–2:45 | Automation + stragglers | Scheduled tasks set up where `scheduled_tasks` exists; catch anyone still mid-flow |
+| 2:45–3:00 | Wrap | Checkpoint round, and a review date set for next week |
+
+**Research doesn't get its own block here** — at this pace it folds into the
+search work positioning step 2–3 and copy step 6 already do inline, per
+"Order and dependencies" above. Run research as its own step only when there's
+real slack in the room or the session isn't time-boxed at all. **Review
+doesn't run same-day either** — there's no week of data yet — the wrap block
+only sets the date and cadence for it.
+
+Outside a timed room (Claude Code with no clock, a ChatGPT Project, someone
+working solo), this table is a default, not a constraint — follow "Skipping
+and time" below instead: name the load-bearing steps for whatever time is
+actually available and drop the rest, rather than forcing this exact
+schedule.
 
 ## The flows
 
@@ -175,8 +210,10 @@ Most people won't name a flow. Map what they ask for:
   **launch**
 - "how did this week go" / "should I keep doing this" / "review the
   campaign" → **review**
-- "build my marketing pipeline" / "run the whole thing" / "take this from
-  positioning to launch" → **the whole pipeline**, per the section above
+- "build my marketing pipeline" / "run the whole thing" / "run the 3-hour
+  workshop" / "take this from positioning to launch" → **the whole
+  pipeline**, per the section above — a single request that starts the
+  entire positioning-through-launch session
 
 If it's ambiguous ("help me with my marketing"), don't guess — name the
 options in one line each and ask which. If someone mid-flow asks something
@@ -506,6 +543,26 @@ Open by telling them the shape: eight questions, the first three are about the
 prospect's mind rather than their product, and what they're building towards is
 a position short enough to survive in a crowded head.
 
+## Starting from nothing
+
+Some people arrive with no customers, no site, sometimes no product beyond an
+idea. The method still works — Ries and Trout's questions are about a category
+and a mind, not a sales history — but three steps change:
+
+- **Step 1** trades a customer's words for a pitch's reception: what you say
+  out loud, and what actually happens when you say it.
+- **Step 2** loses its customer-sourced half; the ladder comes from search and
+  the founder's own read of the category instead, said plainly rather than
+  presented as settled.
+- **Step 8** has no site to audit, so it works from the sentence they already
+  say — the deck line, the elevator pitch — instead.
+
+Steps 3 through 7 are unchanged; the hole, the move, the message, the name,
+and the voice are all decisions, not lookups, and pre-launch is often when
+they're easiest to make honestly, before three years of copy have calcified
+around a segment that got abandoned. Don't apologise for the missing customer
+base or treat it as a special case out loud.
+
 ---
 
 ## Step 1 — The position you own now
@@ -531,6 +588,16 @@ in two sentences.
 frame and buys you two more paragraphs of the same pitch.
 *Better:* "That's what's on your site. What did your last customer say when
 their boss asked why they'd bought it?" — same topic, different head.
+
+**With no customers yet**, there's no purchase to ask about, but there's
+almost always a pitch — a conversation, a deck, an elevator answer. Ask
+instead: what do you say when you describe this out loud, and what's the
+first thing back — a question, a blank look, "oh, like X"? That reaction is
+real data about what's landing in a stranger's head; it just comes from a
+pitch instead of a sale. If they haven't said it out loud to anyone yet
+either, "none" is still the honest answer to write down, same as for a young
+company with customers and no clear position — the difference is a fact to
+note, not a reason to skip the step.
 
 **Write to brief:** Product (header), the offer in plain words, and the
 position they currently own — including "none" if that's the honest answer,
@@ -561,6 +628,13 @@ nobody was considering is aimed at empty air.
 If they don't know the landscape, search rather than working from memory —
 naming a company that pivoted or shut down in front of a room costs
 credibility.
+
+**With no customers to ask,** the ladder comes entirely from search plus the
+founder's own read of the category — say so plainly rather than presenting it
+as settled. The alternative question still works unchanged: ask what *they*
+would have done about this problem last week, before they started building.
+That's a real answer even with zero customers, and it's often the most
+honest rung on the ladder.
 
 **Write to brief:** Category (header), the ladder in rank order with the
 non-product alternatives on it, and which rung they occupy today.
@@ -786,6 +860,11 @@ Convert to rules that can be followed:
 - One before/after: take a sentence from their current site and rewrite it in
   voice, against the position
 
+**With no site yet**, take the sentence instead — the deck line, the elevator
+pitch, whatever they currently say out loud — and do the same before/after.
+It's still copy; it just hasn't been typed onto a page yet, and the rewrite
+is exactly as useful as an input to the copy flow's first draft.
+
 The before/after is what makes the rest usable. Without it the rules stay
 abstract and the copy flow inherits nothing it can act on.
 
@@ -829,7 +908,9 @@ full flow; say so, and offer the full version if there's time.
 1. **What category does your customer file you under, and who's at the top of
    that ladder?** Take the answer as the category and the main alternative.
    Accept a non-product alternative — a spreadsheet, an intern, nothing — if
-   that's what comes back.
+   that's what comes back. With no customers yet, take their own read of the
+   category instead — it's the same fallback as step 2 of the full flow, just
+   without time to search it first.
 2. **What word does that leader own, and what hole is left?** One hole is
    enough. Push once on breadth — the everybody trap at speed is still the
    everybody trap — then take the second answer.

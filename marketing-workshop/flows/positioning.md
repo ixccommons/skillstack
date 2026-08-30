@@ -21,6 +21,26 @@ Open by telling them the shape: eight questions, the first three are about the
 prospect's mind rather than their product, and what they're building towards is
 a position short enough to survive in a crowded head.
 
+## Starting from nothing
+
+Some people arrive with no customers, no site, sometimes no product beyond an
+idea. The method still works — Ries and Trout's questions are about a category
+and a mind, not a sales history — but three steps change:
+
+- **Step 1** trades a customer's words for a pitch's reception: what you say
+  out loud, and what actually happens when you say it.
+- **Step 2** loses its customer-sourced half; the ladder comes from search and
+  the founder's own read of the category instead, said plainly rather than
+  presented as settled.
+- **Step 8** has no site to audit, so it works from the sentence they already
+  say — the deck line, the elevator pitch — instead.
+
+Steps 3 through 7 are unchanged; the hole, the move, the message, the name,
+and the voice are all decisions, not lookups, and pre-launch is often when
+they're easiest to make honestly, before three years of copy have calcified
+around a segment that got abandoned. Don't apologise for the missing customer
+base or treat it as a special case out loud.
+
 ---
 
 ## Step 1 — The position you own now
@@ -46,6 +66,16 @@ in two sentences.
 frame and buys you two more paragraphs of the same pitch.
 *Better:* "That's what's on your site. What did your last customer say when
 their boss asked why they'd bought it?" — same topic, different head.
+
+**With no customers yet**, there's no purchase to ask about, but there's
+almost always a pitch — a conversation, a deck, an elevator answer. Ask
+instead: what do you say when you describe this out loud, and what's the
+first thing back — a question, a blank look, "oh, like X"? That reaction is
+real data about what's landing in a stranger's head; it just comes from a
+pitch instead of a sale. If they haven't said it out loud to anyone yet
+either, "none" is still the honest answer to write down, same as for a young
+company with customers and no clear position — the difference is a fact to
+note, not a reason to skip the step.
 
 **Write to brief:** Product (header), the offer in plain words, and the
 position they currently own — including "none" if that's the honest answer,
@@ -76,6 +106,13 @@ nobody was considering is aimed at empty air.
 If they don't know the landscape, search rather than working from memory —
 naming a company that pivoted or shut down in front of a room costs
 credibility.
+
+**With no customers to ask,** the ladder comes entirely from search plus the
+founder's own read of the category — say so plainly rather than presenting it
+as settled. The alternative question still works unchanged: ask what *they*
+would have done about this problem last week, before they started building.
+That's a real answer even with zero customers, and it's often the most
+honest rung on the ladder.
 
 **Write to brief:** Category (header), the ladder in rank order with the
 non-product alternatives on it, and which rung they occupy today.
@@ -301,6 +338,11 @@ Convert to rules that can be followed:
 - One before/after: take a sentence from their current site and rewrite it in
   voice, against the position
 
+**With no site yet**, take the sentence instead — the deck line, the elevator
+pitch, whatever they currently say out loud — and do the same before/after.
+It's still copy; it just hasn't been typed onto a page yet, and the rewrite
+is exactly as useful as an input to the copy flow's first draft.
+
 The before/after is what makes the rest usable. Without it the rules stay
 abstract and the copy flow inherits nothing it can act on.
 
@@ -344,7 +386,9 @@ full flow; say so, and offer the full version if there's time.
 1. **What category does your customer file you under, and who's at the top of
    that ladder?** Take the answer as the category and the main alternative.
    Accept a non-product alternative — a spreadsheet, an intern, nothing — if
-   that's what comes back.
+   that's what comes back. With no customers yet, take their own read of the
+   category instead — it's the same fallback as step 2 of the full flow, just
+   without time to search it first.
 2. **What word does that leader own, and what hole is left?** One hole is
    enough. Push once on breadth — the everybody trap at speed is still the
    everybody trap — then take the second answer.
