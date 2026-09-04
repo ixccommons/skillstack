@@ -29,5 +29,17 @@ jobs:
           echo "# Brand Brief — CI Smoke" > /tmp/marketing-workshop-ci-smoke/brand-brief.md
           python3 marketing-workshop/scripts/validate_pipeline.py /tmp/marketing-workshop-ci-smoke
 
+      - name: Cofounder index freshness
+        run: python3 cofounder/scripts/build_index.py --check
+
+      - name: Cofounder portable build freshness
+        run: python3 cofounder/portable/build.py --check
+
+      - name: Cofounder skill zip freshness
+        run: python3 cofounder/scripts/build_skill_zip.py --check
+
+      - name: cofounder tests
+        run: python3 -m unittest discover -s cofounder/tests -v
+
       - name: Python compilation check
-        run: python3 -m compileall marketing-workshop
+        run: python3 -m compileall marketing-workshop cofounder

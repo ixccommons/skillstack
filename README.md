@@ -2,6 +2,27 @@
 
 Agent skills, one directory each.
 
+## cofounder
+
+The business decisions a founder would normally take to a cofounder — what to
+build next, pricing, hiring, runway, and the weekly operating rhythm. Parallel
+to `marketing-workshop`: same live-room shape, same one-step-per-turn pacing,
+its own `company-brief.md`, and the same portable route for people without
+Claude. Marketing questions hand off rather than being answered twice.
+
+Modules are added under `cofounder/flows/` — one file each, with frontmatter
+that drives the router, the trigger phrases, the brief's header table, the room
+timetable and the ChatGPT paste file. Adding a module updates all five:
+
+```sh
+cp cofounder/flows/_TEMPLATE.md cofounder/flows/pricing.md   # write it
+make -C cofounder                                            # rebuild
+make -C cofounder check                                      # what CI runs
+```
+
+See [`cofounder/AUTHORING.md`](cofounder/AUTHORING.md) for the frontmatter
+contract and what a module owes the rest of the skill.
+
 ## marketing-workshop
 
 Takes a product from an undefined position to a running, measured marketing
