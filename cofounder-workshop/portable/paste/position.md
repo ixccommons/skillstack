@@ -394,6 +394,21 @@ session:
   segment updates **Who it's for**; Value proposition and the word it turns on
   are new.
 
+**Push back on:** breadth in the segment — once, hard, and early. The express
+pass has time for exactly one push here, so make it the one that produces a
+name rather than a narrower category.
+
+*They say:* "Small business owners."
+*Weak:* "What kind of small business owners?" — sounds like a probe, and gets
+you "small business owners in retail", which is the same answer one size down.
+*Better:* "That's the everybody trap — a position that excludes nobody occupies
+nothing. Name one group you'd turn away, and we'll take whatever's left as the
+segment."
+
+That second question is doing double duty: the group they refuse is what the
+ICP module needs to build disqualifiers from, and it's the field the express
+pass would otherwise never produce.
+
 **Push back on:** a sentence that survived because nobody tested it. The express
 pass runs one test, and one test is not many.
 
@@ -406,7 +421,7 @@ word isn't yours yet. What does your product refuse to do that they happily
 would?"
 
 **Write to brief:** Who it's for (updated), Value proposition (header), The one
-word (header).
+word (header), and the excluded group.
 
 ---
 
@@ -419,7 +434,8 @@ decided and which were assumed.
 
 Write a short note into the brief naming what's untested. At minimum:
 
-- The segment was taken, not stress-tested against a named excluded group.
+- The segment was taken on one push and one test, not worked through the
+  ladder, the leader's word and the seven holes.
 - The alternative was named from memory, not researched.
 - There are no voice rules, no objection list, and no ranked supporting points —
   which the copy work will ask for and have to improvise without.

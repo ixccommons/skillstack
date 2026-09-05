@@ -344,10 +344,12 @@ Before asking anything, read `company-brief.md` and say back:
   the seed of step 4 and the most valuable thing positioning hands over.
 - **The problem and the hole** — what the profile has to be consistent with.
 
-**If the brief has no excluded group**, the positioning was the express pass,
-which skips the exclusion question. Don't proceed as if it's there. Ask once,
-now: *who would you turn away today?* One named group is enough, and getting it
-here is cheaper than discovering in step 4 that nothing was ever ruled out.
+**If the brief has no excluded group**, don't proceed as if it's there. Ask
+once, now: *who would you turn away today?* One named group is enough, and
+getting it here is cheaper than discovering in step 4 that nothing was ever
+ruled out. Positioning usually supplies it — its breadth push asks for exactly
+this — so a brief without one means that push didn't land, which is worth
+noticing rather than quietly patching.
 
 ---
 
