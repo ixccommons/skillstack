@@ -34,7 +34,9 @@ DIVERGENT = {
     "SKILL.md": "names the skill, and explains which twin this is",
     "Makefile": "the workshop twin also syncs the express pass",
     "flows/position.md": "the whole point — delegation versus express pass",
+    "flows/copy.md": "workshop twin only",
     "flows/icp.md": "workshop twin only",
+    "flows/page.md": "workshop twin only",
     "scripts/build_express.py": "workshop twin only",
 }
 

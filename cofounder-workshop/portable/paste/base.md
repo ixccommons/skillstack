@@ -121,6 +121,8 @@ continuous doesn't mean fewer decisions in the person's hands.
 | Building the base | The problem, the premise behind it, the alternatives, and the one you're committing to | `flows/base.md` | 40 | one step per turn |
 | Positioning and customer definition | A segment, a category, and one sentence — the express pass, not the full flow | `flows/position.md` | 15 | one step per turn |
 | The ICP | The account, the person, the trigger and the disqualifiers — specific enough to filter a list with | `flows/icp.md` | 25 | one step per turn |
+| The copy | The headline, the one action, three reasons to believe, the objection, and a voice to write them in | `flows/copy.md` | 25 | one step per turn |
+| The landing page | Section order, the states nobody remembers, and getting it live or paste-ready | `flows/page.md` | 30 | one step per turn |
 
 <!-- FLOWS:END -->
 
@@ -135,6 +137,8 @@ Most people won't name a module. Map what they ask for:
 - "help me think through an idea" / "is this worth building" / "what should I build" / "pressure-test my idea" / "I have an idea" → **base**
 - "who is this for" / "define my customer" / "work on my positioning" / "who exactly am I selling to" / "my value proposition" → **position**
 - "build my ICP" / "who exactly should I target" / "ideal customer profile" / "who do I go after" / "who should I not sell to" → **icp**
+- "write my copy" / "what should my headline say" / "what do I put on the page" / "how do I describe this" → **copy**
+- "build my landing page" / "put up a page" / "ship the page" / "make the site" → **page**
 
 <!-- ROUTING:END -->
 
@@ -174,6 +178,8 @@ steps change it:
 | Value proposition | |
 | The one word | |
 | ICP | |
+| Headline | |
+| Landing page | |
 | Modules completed | |
 | Last updated | |
 ```
@@ -265,9 +271,11 @@ it to one line; don't turn it into a ceremony.
 | 0:05–0:45 | Building the base (40 min) | The problem, the premise behind it, the alternatives, and the one you're committing to |
 | 0:45–1:00 | Positioning and customer definition (15 min) | A segment, a category, and one sentence — the express pass, not the full flow |
 | 1:00–1:25 | The ICP (25 min) | The account, the person, the trigger and the disqualifiers — specific enough to filter a list with |
-| 1:25–1:40 | Wrap | Checkpoint round; every decision has an owner and a date |
+| 1:25–1:50 | The copy (25 min) | The headline, the one action, three reasons to believe, the objection, and a voice to write them in |
+| 1:50–2:20 | The landing page (30 min) | Section order, the states nobody remembers, and getting it live or paste-ready |
+| 2:20–2:35 | Wrap | Checkpoint round; every decision has an owner and a date |
 
-Total: **1h 40m** of room time (5 open + 80 modules + 15 wrap), before any break, demo or show-and-tell. Subtract those from the room's actual length before promising this schedule to anyone.
+Total: **2h 35m** of room time (5 open + 135 modules + 15 wrap), before any break, demo or show-and-tell. Subtract those from the room's actual length before promising this schedule to anyone.
 
 <!-- TIMETABLE:END -->
 
