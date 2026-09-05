@@ -124,7 +124,7 @@ continuous doesn't mean fewer decisions in the person's hands.
 | Positioning and customer definition | A segment, a category, and one sentence — the express pass, not the full flow | `flows/position.md` | 15 | one step per turn |
 | The ICP | The account, the person, the trigger and the disqualifiers — specific enough to filter a list with | `flows/icp.md` | 25 | one step per turn |
 | The copy | The headline, the one action, three reasons to believe, the objection, and a voice to write them in | `flows/copy.md` | 25 | one step per turn |
-| The landing page | Section order, the states nobody remembers, and getting it live or paste-ready | `flows/page.md` | 30 | one step per turn |
+| The landing page | Section order, a design system that doesn't look generated, and a Next.js project that ships | `flows/page.md` | 40 | one step per turn |
 
 <!-- FLOWS:END -->
 
@@ -140,7 +140,7 @@ Most people won't name a module. Map what they ask for:
 - "who is this for" / "define my customer" / "work on my positioning" / "who exactly am I selling to" / "my value proposition" → **position**
 - "build my ICP" / "who exactly should I target" / "ideal customer profile" / "who do I go after" / "who should I not sell to" → **icp**
 - "write my copy" / "what should my headline say" / "what do I put on the page" / "how do I describe this" → **copy**
-- "build my landing page" / "put up a page" / "ship the page" / "make the site" → **page**
+- "build my landing page" / "put up a page" / "ship the page" / "make the site" / "design the page" → **page**
 
 <!-- ROUTING:END -->
 
@@ -280,10 +280,10 @@ saying "share your progress".
 | 0:30–0:45 | Positioning and customer definition (15 min) | A segment, a category, and one sentence — the express pass, not the full flow |
 | 0:45–1:10 | The ICP (25 min) | The account, the person, the trigger and the disqualifiers — specific enough to filter a list with |
 | 1:10–1:35 | The copy (25 min) | The headline, the one action, three reasons to believe, the objection, and a voice to write them in |
-| 1:35–2:05 | The landing page (30 min) | Section order, the states nobody remembers, and getting it live or paste-ready |
-| 2:05–2:20 | Wrap | Checkpoint round; every decision has an owner and a date |
+| 1:35–2:15 | The landing page (40 min) | Section order, a design system that doesn't look generated, and a Next.js project that ships |
+| 2:15–2:30 | Wrap | Checkpoint round; every decision has an owner and a date |
 
-Total: **2h 20m** of session time (5 open + 120 modules + 15 wrap), before any break, demo or show-and-tell. Subtract those from the session's actual length before promising this schedule to anyone.
+Total: **2h 30m** of session time (5 open + 130 modules + 15 wrap), before any break, demo or show-and-tell. Subtract those from the session's actual length before promising this schedule to anyone.
 
 <!-- TIMETABLE:END -->
 
@@ -316,134 +316,507 @@ each. See `portable/README.md`.
 
 ---
 
+# Reference — `references/design-system.md`
+
+# Landing page design system
+
+Two jobs. Stop the page looking generated, and satisfy what a landing page has
+to do in the first five seconds. They pull in the same direction more often than
+people expect.
+
+## Why generated pages look the same
+
+A model asked to "build a landing page" with no constraints emits the median of
+its training data — which is every Tailwind tutorial scraped from GitHub since
+2019. That median has a look, and everyone can now recognise it.
+
+**Rule out the defaults explicitly.** These are the tells, and every one of them
+should be a deliberate choice if it appears at all:
+
+- A purple or indigo gradient — especially a blurred orb behind the hero
+- Inter for everything, at every weight, with no second family
+- Rounded cards with a thin grey border and a soft drop shadow
+- Three feature cards in a row, icon on top, equal width
+- A small pill badge floating above a centred headline
+- Glassmorphism, and gradient text on the headline
+- Emoji standing in for icons
+- A "Trusted by" strip with logos of companies that aren't customers
+
+None of these are bad in isolation. Together they are a uniform. If the page
+has four of them it reads as generated no matter how good the copy is.
+
+## What makes a page feel made by a person
+
+Not polish — polish is what the defaults already have. What reads as handmade is
+**evidence of a decision**:
+
+- **One opinionated typeface.** A real display face for headlines against a
+  plain workhorse for body. Two families, maximum. The choice should be legible
+  as a choice — a page set in something with a personality reads as authored
+  even when the layout is simple.
+- **Asymmetry somewhere.** Everything centred is the default. Left-aligned
+  headlines, an off-centre hero, a section that breaks the grid on purpose.
+- **Uneven whitespace.** Generous, and *not* uniform. Space should mark where
+  ideas end, not sit at 96px between every section.
+- **Something real in the first screen.** A product screenshot, a short loop of
+  it working, a photograph of the person. Real beats illustrated, and a
+  screenshot of a rough product beats a beautiful abstract render.
+- **One idiosyncratic detail.** A hand-drawn arrow, a footnote, an aside in the
+  margin, a slightly odd cursor. One. It signals a person was here.
+- **Restraint in colour.** A ground, an ink, and exactly one accent used
+  sparingly enough to mean something.
+
+## The token block
+
+Fill this in before writing any markup. It is the whole design system; keep it
+in the project as `DESIGN.md` so later work stays consistent with it.
+
+```markdown
+# DESIGN.md
+
+## Type
+Display:      [family, weight, and where it's allowed]
+Body:         [family, weight]
+Scale:        [4–5 sizes, actual values — e.g. 14 / 17 / 22 / 34 / 56]
+Measure:      [max line length for body, 60–75 characters]
+
+## Colour
+Ground:       [page background — off-white or near-black, rarely pure]
+Ink:          [body text, and a muted variant for secondary]
+Accent:       [one, with where it is allowed to appear]
+Rule:         [border colour, if borders are used at all]
+
+## Space
+Scale:        [4–6 steps, e.g. 8 / 16 / 32 / 64 / 120]
+Section rhythm: [what separates sections — space, a rule, a ground change]
+
+## Shape
+Radius:       [one value, used everywhere, or none]
+Border:       [width and where — or "none, space does the separating"]
+Shadow:       [usually "none"]
+
+## Motion
+Reveal:       [one direction, one distance, one duration]
+Scroll:       [lerp value]
+Reduced:      [what happens under prefers-reduced-motion]
+```
+
+**Pick values, not ranges.** "Somewhere between 16 and 24" produces
+inconsistency; 16 produces a system. Every value that isn't chosen gets chosen
+by the model, and it will pick the median.
+
+## What the first screen must do
+
+From how strong landing pages are actually built — and what YC-shaped early
+pages consistently get right:
+
+- **An outcome headline.** What the person gets, not what the product is.
+- **A subhead that says who it's for**, or how it works. One of the two.
+- **One CTA, visually dominant.** Not three buttons of equal weight.
+- **Something showing the product** above the fold — a screenshot, a short
+  demo, an interactive preview. A visitor should understand the problem being
+  solved in about fifteen seconds without reading a second section.
+- **Trust near the action**, not in a strip at the bottom — and only real
+  signals.
+
+Load in under two seconds and lazy-load everything below the fold. A slow page
+is a design failure before it is a performance one.
+
+## Motion rules
+
+Slow scroll and reveals are the easiest way to make a page feel considered and
+the easiest way to make it feel like a demo reel. The line is that **motion
+should be felt, not noticed**.
+
+- **Smooth scroll**: a light `lerp` (0.08–0.12). Heavier and the page feels
+  like it's fighting the wheel; that's the single most common complaint about
+  smooth-scroll sites.
+- **Reveals**: one direction, one distance (8–24px), one duration (250–500ms),
+  one easing. Stagger children by 40–80ms at most.
+- **Once.** Elements reveal on first view and stay revealed. Re-animating on
+  every scroll past is the tell that separates a designed page from a template.
+- **Never the hero.** The first screen renders immediately. Animating the
+  headline in delays the only content most visitors will read.
+- **`prefers-reduced-motion`** disables both the smooth scroll and the reveals.
+  Not "reduces" — disables, with everything visible.
+- **Nothing important waits on JavaScript.** Content is in the DOM and visible
+  by default; motion is added to it. A reveal implemented as "hidden until JS
+  runs" is a page that renders blank when the script fails.
+
+---
+
+# Reference — `references/nextjs-starter.md`
+
+# The Next.js starter
+
+The stack, the files, and the two pieces of motion code worth getting right.
+Everything here is deliberately small — a landing page is one route, and a
+starter that needs explaining is a starter that gets abandoned.
+
+## Stack
+
+```sh
+npx create-next-app@latest my-page --typescript --app --tailwind --eslint
+cd my-page
+npm i lenis
+```
+
+- **Next.js App Router** — one route, static, deploys anywhere.
+- **Lenis** for smooth scroll. The package is `lenis`; the old
+  `@studio-freight/*` packages are retired and the imports have moved.
+- **No component library.** shadcn and friends are designed to be pasted by
+  agents, which is exactly why their defaults are recognisable. A landing page
+  is a handful of sections, not an app.
+- **No animation library** unless something genuinely needs it. An
+  IntersectionObserver is about fifteen lines and doesn't ship a runtime.
+
+## Tokens first
+
+Put the filled-in `DESIGN.md` block into `app/globals.css` as custom
+properties, before writing any markup. Everything else reads from these:
+
+```css
+:root {
+  --ground: #faf9f7;
+  --ink: #16150f;
+  --ink-muted: #57544a;
+  --accent: #1b4d3e;
+  --rule: #e4e0d8;
+
+  --step-0: 1.0625rem;   /* body */
+  --step-1: 1.375rem;
+  --step-2: 2.125rem;
+  --step-3: 3.5rem;      /* headline */
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+  --space-5: 7.5rem;     /* between sections */
+
+  --radius: 4px;
+  --measure: 68ch;
+}
+
+@media (prefers-color-scheme: dark) { /* only if you actually want dark mode */ }
+```
+
+Swap the values. The ones above are an example of *committing* to values, not a
+palette to adopt.
+
+## Smooth scroll
+
+`ReactLenis` is a client component, so it needs a wrapper before it can go in a
+server-rendered layout.
+
+```tsx
+// app/smooth-scroll.tsx
+'use client'
+
+import { ReactLenis } from 'lenis/react'
+import 'lenis/dist/lenis.css'
+
+export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+  return (
+    <ReactLenis root options={{ lerp: 0.1, smoothWheel: true }}>
+      {children}
+    </ReactLenis>
+  )
+}
+```
+
+```tsx
+// app/layout.tsx
+import SmoothScroll from './smooth-scroll'
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
+    </html>
+  )
+}
+```
+
+The `lenis.css` import is required — without it the scroll container is wrong
+and the page behaves strangely on touch devices.
+
+## Reveals
+
+Fifteen lines, no dependency, and — the part that matters — **the content is in
+the DOM and visible by default.** Motion is added to it, so a failed script
+leaves a readable page rather than a blank one.
+
+```tsx
+// app/reveal.tsx
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+
+export default function Reveal({
+  children,
+  delay = 0,
+}: {
+  children: React.ReactNode
+  delay?: number
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [shown, setShown] = useState(false)
+
+  useEffect(() => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduced || !ref.current) return setShown(true)
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShown(true)
+          io.disconnect()   // reveal once, never again
+        }
+      },
+      { rootMargin: '0px 0px -12% 0px' },
+    )
+    io.observe(ref.current)
+    return () => io.disconnect()
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      data-shown={shown}
+      style={{ transitionDelay: `${delay}ms` }}
+      className="reveal"
+    >
+      {children}
+    </div>
+  )
+}
+```
+
+```css
+/* one direction, one distance, one duration — the whole motion system */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+}
+.reveal[data-shown='true'] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+```
+
+Wrap sections, not individual words. Stagger siblings with `delay={80}`,
+`delay={160}` — and stop there. **Never wrap the hero.** It renders immediately.
+
+## Structure
+
+```
+app/
+  layout.tsx        html shell + SmoothScroll
+  page.tsx          the whole landing page, sections in order
+  globals.css       tokens, reveal, base type
+  smooth-scroll.tsx client wrapper
+  reveal.tsx        client wrapper
+  opengraph-image.png
+public/
+  [the product screenshot or demo loop]
+DESIGN.md           the filled-in token block
+```
+
+One route. If a second page appears, it's a privacy policy.
+
+## Before it goes public
+
+- The form posts somewhere real and you have tested it end to end
+- Success and error states exist and say what happens next
+- `<title>`, meta description, and an OG image — the link gets shared before
+  anyone visits it
+- Real text in the HTML, not text baked into images
+- Lighthouse on mobile: under two seconds, no layout shift on the hero
+- Tab through it once — the CTA is reachable and focus is visible
+- Turn off JavaScript: the page still reads
+- The screenshot is of the actual product
+
+## Deploy
+
+```sh
+npx vercel        # or: npm run build && npx serve out
+```
+
+Point the domain at it, then open the live URL on a phone before telling anyone
+it's up.
+
+---
+
 # The landing page
 
-Six steps, roughly 30 minutes. Output is a page — live if this session can
-publish one, and otherwise complete enough that someone can paste it into a
-builder in twenty minutes without another decision to make.
+Six steps, roughly 40 minutes. The copy module decided what the page says. This
+one decides the order it says it in, what it looks like, and gets it built.
 
-The copy module decided what it says. This module decides the order it says it
-in, the states around it, and where it lives.
+Output is a Next.js project — one route, smooth scroll, reveals that reveal
+once — built against a design system written down before any markup. Where the
+session can't run a terminal, the same project as complete files to paste, with
+the commands to run them.
 
-**A page that is written and ready is a real result. It is not a live page.**
-Never describe one as the other, at any point in this module.
+Two rules that hold throughout:
+
+- **A page that is written and ready is a real result. It is never described as
+  live.** Live means published, read back, and verified.
+- **Never generate a testimonial, a customer name, or a company logo.** If they
+  want social proof they don't have, the answer is to go and get some.
 
 Run one step per turn. See the pacing section in `SKILL.md`.
 
 ---
 
-## Step 1 — The spine
+## Step 1 — The spine and the first screen
 
-Read the brief and lay out the page in order, above the fold first:
+Lay the page out in order before any prose, one line per section:
 
-1. **Hero** — headline, subhead, the one button. Nothing else competing.
-2. **The proof strip or the first reason** — whichever is stronger.
-3. **Reasons two and three**, one section each, in the ranked order.
-4. **The objection**, answered.
-5. **The action again**, with the same button text as the hero.
+1. **Hero** — headline, subhead, one button, and something showing the product
+2. **Reason one**, the strongest
+3. **Reasons two and three**, one section each
+4. **The objection**, answered
+5. **The action again**, same button text as the hero
 
-Show it as an outline, not prose — one line per section. This takes two minutes
-and it's the last cheap moment to notice the page is arguing in the wrong order.
+Then hold the first screen to what it has to do. A visitor should understand the
+problem being solved in about fifteen seconds without reading a second section:
 
-**One idea per section.** The most common failure is a page that says nine
-things at equal volume, which reads as saying nothing.
-
-**Write to brief:** the section order.
-
----
-
-## Step 2 — Above the fold
-
-**Ask:** If someone reads only the top of this page for five seconds and then
-leaves, what do they now know?
-
-Say it back as the three things a visitor should be able to answer: what is it,
-who is it for, what do I do next. If any is missing above the fold, fix it here
-rather than trusting a section further down to carry it — most visitors never
-reach it.
+- **An outcome headline** — what they get, not what it is
+- **A subhead saying who it's for**, or how it works. One of the two.
+- **One CTA, visually dominant.** Not three buttons of equal weight.
+- **Something showing the product** — a screenshot, a short loop, a live
+  preview. Real and rough beats polished and abstract.
+- **Trust near the action**, and only real signals.
 
 **Push back on:** a hero carrying an explanation.
 
 *They say:* "The subhead needs to explain how the calendar sync works, otherwise
 people won't get it."
-*Weak:* "Let's tighten that down to one sentence." — keeps the mechanism above
-the fold and just makes it terser.
+*Weak:* "Let's tighten that to one sentence." — keeps the mechanism above the
+fold and just makes it terser.
 *Better:* "The top of the page has one job: make someone want the next section.
 Mechanism goes in reason one, where it's proof rather than preamble. What does
 the person get, in the words they'd use?"
 
-**Write to brief:** nothing — this is a check on step 1's work.
+**Write to brief:** the section order.
 
 ---
 
-## Step 3 — Credibility for a company nobody knows
+## Step 2 — Credibility for a company nobody knows
 
 **Ask:** What on this page makes it look like a real thing built by real people?
 
-For a new product this does more work than any argument. What actually helps:
+For a new product this does more work than any argument:
 
 - **A name and a face.** The founder, said plainly. Anonymity reads as risk.
-- **Something that shows the product working** — a screenshot, a short clip, a
-  live demo, real output rather than a mockup.
-- **Specifics instead of scale.** "Three agencies are using it this month" is
-  stronger than "trusted by teams everywhere", and it's true.
+- **Something that shows it working** — a screenshot, a clip, real output.
+- **Specifics instead of scale.** "Three agencies are using it this month" beats
+  "trusted by teams everywhere", and it's true.
 - **A way out.** No card required, cancel any time, export your data.
 
-What doesn't: stock photography, fake logo strips, invented testimonials, and
-counters that count nothing. **Never generate a testimonial, a customer name,
-or a logo.** If they want social proof they don't have, the answer is to go and
-get one, not to write one.
+What doesn't: stock photography, invented testimonials, logo strips of companies
+that aren't customers, counters that count nothing.
 
-**Write to brief:** the credibility elements chosen, and any that need making
-before launch.
+**Write to brief:** what's being used, and anything that needs making first.
 
 ---
 
-## Step 4 — The states nobody remembers
+## Step 3 — The states nobody remembers
 
-The page is not the only screen. Three more decide whether the action actually
-completes:
+The page isn't the only screen. Three more decide whether the action completes:
 
-- **The form.** Fewest fields that let you follow up. Every additional field
-  costs conversions; ask why each one exists.
-- **After they act.** What the person sees the second they click — a thank-you
-  that says what happens next and when, not a blank page or a bare "submitted".
-- **When it fails.** A duplicate signup, an invalid address, a form that errors.
-  Say what to do, not "an error occurred".
+- **The form.** Fewest fields that let you follow up. Every extra field costs
+  conversions — ask why each exists.
+- **After they act.** What they see the second they click: what happens next,
+  and when. Not a blank page.
+- **When it fails.** Duplicate signup, invalid address, a form that errors. Say
+  what to do.
 
-Then the one people forget entirely: **the first message they receive.** Write
-it now, in the voice from the copy module, in three lines. If the honest content
-is "thanks, I'll reply personally this week", that's a fine message and a
-promise that can be kept.
+Then the one people forget: **the first message they receive.** Write it now, in
+the voice from the copy module, in three lines. "Thanks — I'll reply personally
+this week" is a fine message and a promise that can be kept.
 
-**Write to brief:** the form fields, the thank-you wording, and the first
-message.
+**Write to brief:** form fields, the thank-you wording, the first message.
 
 ---
 
-## Step 5 — Ship it
+## Step 4 — The design pass
 
-**Ask:** Where does this page live?
+Read `references/design-system.md` and fill in its token block **before any
+markup exists.** This is the step that decides whether the page looks made or
+generated, and it takes about eight minutes.
 
-**If this session can actually publish it** — a connected CMS, a site repo,
-write access to a builder — then do it, with the care any publish deserves:
-show the exact destination and the exact final content once, get an explicit yes
-to that specific preview rather than to a general "looks good", publish, then
-**read the live page back** and confirm it matches before saying it's done. If
-the read-back doesn't match, say so and don't retry more than once.
+Work it in this order:
 
-**If it can't** — which on a free ChatGPT account is always — produce the
-complete package instead and say plainly that it isn't live:
+1. **Rule out the defaults out loud.** Name them — the indigo gradient, Inter
+   everywhere, three icon-topped cards, the pill badge over a centred headline,
+   soft-shadowed rounded boxes. A model with no constraints emits the median of
+   its training data, and everyone can now recognise that median.
+2. **Pick the type.** One display face with a personality, one plain workhorse.
+   Two families, maximum. This single choice does more than everything else.
+3. **Pick a ground, an ink, and one accent.** Rarely pure white or pure black.
+   Say where the accent is allowed to appear.
+4. **Commit to values, not ranges.** Actual numbers for the type scale, the
+   space scale, the radius. Anything left unchosen gets chosen by the model, and
+   it picks the median.
+5. **Choose the one idiosyncratic detail.** A hand-drawn arrow, a margin note, a
+   footnote, an odd cursor. One. It's the thing that reads as a person.
 
-- The full copy, section by section, in one block ready to paste
-- The form fields and the three states from step 4
-- A build checklist: where to build it, what to name it, what to connect the
-  form to, and what to check before making it public
-- The title tag and meta description, since a builder will ask for both and a
-  person who hasn't written them will type something forgettable
+**Push back on:** deferring the look until after the build.
+
+*They say:* "Let's get it working first and make it look good after."
+*Weak:* "Sure — we can restyle it once the structure's there." — the restyle
+never happens, and the defaults become the design by inertia.
+*Better:* "The tokens take eight minutes now and they can't be retrofitted —
+every component gets built against whatever we don't decide. What typeface are
+we using?"
+
+**Write to brief:** the filled-in token block, as its own draft — it becomes
+`DESIGN.md` in the project.
+
+---
+
+## Step 5 — Build it
+
+Read `references/nextjs-starter.md`. One route, Next.js App Router, Lenis for
+smooth scroll, and a fifteen-line reveal component instead of an animation
+library.
+
+**If this session can write files and run commands**, scaffold it: the project,
+the tokens in `globals.css`, the smooth-scroll wrapper, the reveal component,
+`DESIGN.md`, then the page itself section by section from steps 1–3. Run it and
+look at it before saying anything about it.
+
+**If it can't** — which on a free ChatGPT account is always — produce the same
+project as complete files, each in its own copyable block, with the commands to
+run in order. Say plainly that nothing has been created. A person with those
+files and twenty minutes has a running page; a person with a description of them
+has homework.
+
+Either way the motion rules are not negotiable, because they're what separates a
+considered page from a demo reel:
+
+- Light `lerp` — heavier and the page fights the wheel
+- Reveals happen **once**, and never on the hero
+- `prefers-reduced-motion` disables both, with everything visible
+- Content is in the DOM and readable with JavaScript off
+
+**Then publishing.** If the session has real write access to somewhere it can
+go live, show the exact destination and content once, get an explicit yes to
+that specific preview, publish, and **read the live page back** before saying
+it's done. Otherwise: the project plus the deploy commands is the deliverable,
+and it is not live.
 
 **Write to brief:** Landing page (header) — the URL if it's live and verified,
-otherwise `ready to publish` with where the draft is.
+otherwise `ready to deploy` and where the project is.
 
 ---
 
@@ -452,16 +825,14 @@ otherwise `ready to publish` with where the draft is.
 **Ask:** Read the page out loud as the person from your ICP, on a phone, between
 two other things.
 
-Three checks, quickly:
-
-- **Does the first screen say what it is?** Not what it's *like* — what it is.
-- **Is there anything they'd have to already know to understand it?** Internal
-  vocabulary, a category name only insiders use, a feature name that means
-  nothing yet.
+- **Does the first screen say what it is?** Not what it's like — what it is.
+- **Is there anything they'd need to already know?** Internal vocabulary, a
+  category name only insiders use, a feature name that means nothing yet.
 - **Is the next step obvious without scrolling back up?**
+- **Does the motion get in the way?** If anyone notices the scrolling, the lerp
+  is too heavy.
 
-Fix what this surfaces now, while the page is still soft. It is a five-minute
-step that routinely catches something the previous twenty-five didn't, because
+Five minutes, and it routinely catches what the previous thirty-five didn't —
 it's the first time anyone reads the whole thing in order at speed.
 
 **Write to brief:** anything changed as a result.
@@ -471,31 +842,30 @@ it's the first time anyone reads the whole thing in order at speed.
 ## Closing the module
 
 Read back the headline, the button, and whether the page is live or ready.
-Nothing else.
 
 Then the checkpoint: ask them to post their URL if it's live, or their headline
-and button if it isn't. Where most people can't publish, the second is the normal
-answer and shouldn't feel like a shortfall — say so, because online nobody can
-see that everyone else is in the same position.
+and button if it isn't. Where most people can't publish, the second is the
+normal answer and shouldn't feel like a shortfall — say so, because online
+nobody can see that everyone else is in the same position.
 
 **Then what's next.** The page exists; nobody has seen it. Getting it in front
-of the segment — communities, directories, newsletters, events, and a 30-day
+of the segment — communities, directories, newsletters, events, a 30-day
 sequence — is the distribution work in `marketing-workshop`, which reads the
 segment and the ICP straight out of this brief. **This module doesn't do
 outreach or build contact lists**, and neither does that one.
 
-If the page is live, set one date to look at it again with actual numbers. A
-page nobody revisits is a page that stays wrong.
+If the page is live, set one date to look at it again with real numbers. A page
+nobody revisits is a page that stays wrong.
 
 ---
 
 ## Starting from nothing
 
 This module assumes a domain and somewhere to host. Plenty of people have
-neither, and that's a twenty-minute problem rather than a blocker — say so
-rather than letting it derail the step.
+neither, and it's a twenty-minute problem rather than a blocker — say so rather
+than letting it derail the step.
 
-With no domain, the page still gets written and the checklist still gets made;
-the build checklist gains one line at the top. Don't spend the module's time on
-choosing a domain name — it's the most tempting procrastination available at
-this exact moment, and the page is worth more than the name.
+With no domain the project still gets built and the deploy commands still get
+written; the checklist gains one line at the top. **Don't spend the module's
+time choosing a domain name.** It's the most tempting procrastination available
+at this exact moment, and the page is worth more than the name.

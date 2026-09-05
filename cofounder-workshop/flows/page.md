@@ -1,8 +1,8 @@
 ---
 title: The landing page
-covers: Section order, the states nobody remembers, and getting it live or paste-ready
-triggers: build my landing page; put up a page; ship the page; make the site
-minutes: 30
+covers: Section order, a design system that doesn't look generated, and a Next.js project that ships
+triggers: build my landing page; put up a page; ship the page; make the site; design the page
+minutes: 40
 pacing: one step per turn
 order: 50
 after: copy
@@ -11,132 +11,166 @@ adds-header: Landing page
 
 # The landing page
 
-Six steps, roughly 30 minutes. Output is a page — live if this session can
-publish one, and otherwise complete enough that someone can paste it into a
-builder in twenty minutes without another decision to make.
+Six steps, roughly 40 minutes. The copy module decided what the page says. This
+one decides the order it says it in, what it looks like, and gets it built.
 
-The copy module decided what it says. This module decides the order it says it
-in, the states around it, and where it lives.
+Output is a Next.js project — one route, smooth scroll, reveals that reveal
+once — built against a design system written down before any markup. Where the
+session can't run a terminal, the same project as complete files to paste, with
+the commands to run them.
 
-**A page that is written and ready is a real result. It is not a live page.**
-Never describe one as the other, at any point in this module.
+Two rules that hold throughout:
+
+- **A page that is written and ready is a real result. It is never described as
+  live.** Live means published, read back, and verified.
+- **Never generate a testimonial, a customer name, or a company logo.** If they
+  want social proof they don't have, the answer is to go and get some.
 
 Run one step per turn. See the pacing section in `SKILL.md`.
 
 ---
 
-## Step 1 — The spine
+## Step 1 — The spine and the first screen
 
-Read the brief and lay out the page in order, above the fold first:
+Lay the page out in order before any prose, one line per section:
 
-1. **Hero** — headline, subhead, the one button. Nothing else competing.
-2. **The proof strip or the first reason** — whichever is stronger.
-3. **Reasons two and three**, one section each, in the ranked order.
-4. **The objection**, answered.
-5. **The action again**, with the same button text as the hero.
+1. **Hero** — headline, subhead, one button, and something showing the product
+2. **Reason one**, the strongest
+3. **Reasons two and three**, one section each
+4. **The objection**, answered
+5. **The action again**, same button text as the hero
 
-Show it as an outline, not prose — one line per section. This takes two minutes
-and it's the last cheap moment to notice the page is arguing in the wrong order.
+Then hold the first screen to what it has to do. A visitor should understand the
+problem being solved in about fifteen seconds without reading a second section:
 
-**One idea per section.** The most common failure is a page that says nine
-things at equal volume, which reads as saying nothing.
-
-**Write to brief:** the section order.
-
----
-
-## Step 2 — Above the fold
-
-**Ask:** If someone reads only the top of this page for five seconds and then
-leaves, what do they now know?
-
-Say it back as the three things a visitor should be able to answer: what is it,
-who is it for, what do I do next. If any is missing above the fold, fix it here
-rather than trusting a section further down to carry it — most visitors never
-reach it.
+- **An outcome headline** — what they get, not what it is
+- **A subhead saying who it's for**, or how it works. One of the two.
+- **One CTA, visually dominant.** Not three buttons of equal weight.
+- **Something showing the product** — a screenshot, a short loop, a live
+  preview. Real and rough beats polished and abstract.
+- **Trust near the action**, and only real signals.
 
 **Push back on:** a hero carrying an explanation.
 
 *They say:* "The subhead needs to explain how the calendar sync works, otherwise
 people won't get it."
-*Weak:* "Let's tighten that down to one sentence." — keeps the mechanism above
-the fold and just makes it terser.
+*Weak:* "Let's tighten that to one sentence." — keeps the mechanism above the
+fold and just makes it terser.
 *Better:* "The top of the page has one job: make someone want the next section.
 Mechanism goes in reason one, where it's proof rather than preamble. What does
 the person get, in the words they'd use?"
 
-**Write to brief:** nothing — this is a check on step 1's work.
+**Write to brief:** the section order.
 
 ---
 
-## Step 3 — Credibility for a company nobody knows
+## Step 2 — Credibility for a company nobody knows
 
 **Ask:** What on this page makes it look like a real thing built by real people?
 
-For a new product this does more work than any argument. What actually helps:
+For a new product this does more work than any argument:
 
 - **A name and a face.** The founder, said plainly. Anonymity reads as risk.
-- **Something that shows the product working** — a screenshot, a short clip, a
-  live demo, real output rather than a mockup.
-- **Specifics instead of scale.** "Three agencies are using it this month" is
-  stronger than "trusted by teams everywhere", and it's true.
+- **Something that shows it working** — a screenshot, a clip, real output.
+- **Specifics instead of scale.** "Three agencies are using it this month" beats
+  "trusted by teams everywhere", and it's true.
 - **A way out.** No card required, cancel any time, export your data.
 
-What doesn't: stock photography, fake logo strips, invented testimonials, and
-counters that count nothing. **Never generate a testimonial, a customer name,
-or a logo.** If they want social proof they don't have, the answer is to go and
-get one, not to write one.
+What doesn't: stock photography, invented testimonials, logo strips of companies
+that aren't customers, counters that count nothing.
 
-**Write to brief:** the credibility elements chosen, and any that need making
-before launch.
+**Write to brief:** what's being used, and anything that needs making first.
 
 ---
 
-## Step 4 — The states nobody remembers
+## Step 3 — The states nobody remembers
 
-The page is not the only screen. Three more decide whether the action actually
-completes:
+The page isn't the only screen. Three more decide whether the action completes:
 
-- **The form.** Fewest fields that let you follow up. Every additional field
-  costs conversions; ask why each one exists.
-- **After they act.** What the person sees the second they click — a thank-you
-  that says what happens next and when, not a blank page or a bare "submitted".
-- **When it fails.** A duplicate signup, an invalid address, a form that errors.
-  Say what to do, not "an error occurred".
+- **The form.** Fewest fields that let you follow up. Every extra field costs
+  conversions — ask why each exists.
+- **After they act.** What they see the second they click: what happens next,
+  and when. Not a blank page.
+- **When it fails.** Duplicate signup, invalid address, a form that errors. Say
+  what to do.
 
-Then the one people forget entirely: **the first message they receive.** Write
-it now, in the voice from the copy module, in three lines. If the honest content
-is "thanks, I'll reply personally this week", that's a fine message and a
-promise that can be kept.
+Then the one people forget: **the first message they receive.** Write it now, in
+the voice from the copy module, in three lines. "Thanks — I'll reply personally
+this week" is a fine message and a promise that can be kept.
 
-**Write to brief:** the form fields, the thank-you wording, and the first
-message.
+**Write to brief:** form fields, the thank-you wording, the first message.
 
 ---
 
-## Step 5 — Ship it
+## Step 4 — The design pass
 
-**Ask:** Where does this page live?
+Read `references/design-system.md` and fill in its token block **before any
+markup exists.** This is the step that decides whether the page looks made or
+generated, and it takes about eight minutes.
 
-**If this session can actually publish it** — a connected CMS, a site repo,
-write access to a builder — then do it, with the care any publish deserves:
-show the exact destination and the exact final content once, get an explicit yes
-to that specific preview rather than to a general "looks good", publish, then
-**read the live page back** and confirm it matches before saying it's done. If
-the read-back doesn't match, say so and don't retry more than once.
+Work it in this order:
 
-**If it can't** — which on a free ChatGPT account is always — produce the
-complete package instead and say plainly that it isn't live:
+1. **Rule out the defaults out loud.** Name them — the indigo gradient, Inter
+   everywhere, three icon-topped cards, the pill badge over a centred headline,
+   soft-shadowed rounded boxes. A model with no constraints emits the median of
+   its training data, and everyone can now recognise that median.
+2. **Pick the type.** One display face with a personality, one plain workhorse.
+   Two families, maximum. This single choice does more than everything else.
+3. **Pick a ground, an ink, and one accent.** Rarely pure white or pure black.
+   Say where the accent is allowed to appear.
+4. **Commit to values, not ranges.** Actual numbers for the type scale, the
+   space scale, the radius. Anything left unchosen gets chosen by the model, and
+   it picks the median.
+5. **Choose the one idiosyncratic detail.** A hand-drawn arrow, a margin note, a
+   footnote, an odd cursor. One. It's the thing that reads as a person.
 
-- The full copy, section by section, in one block ready to paste
-- The form fields and the three states from step 4
-- A build checklist: where to build it, what to name it, what to connect the
-  form to, and what to check before making it public
-- The title tag and meta description, since a builder will ask for both and a
-  person who hasn't written them will type something forgettable
+**Push back on:** deferring the look until after the build.
+
+*They say:* "Let's get it working first and make it look good after."
+*Weak:* "Sure — we can restyle it once the structure's there." — the restyle
+never happens, and the defaults become the design by inertia.
+*Better:* "The tokens take eight minutes now and they can't be retrofitted —
+every component gets built against whatever we don't decide. What typeface are
+we using?"
+
+**Write to brief:** the filled-in token block, as its own draft — it becomes
+`DESIGN.md` in the project.
+
+---
+
+## Step 5 — Build it
+
+Read `references/nextjs-starter.md`. One route, Next.js App Router, Lenis for
+smooth scroll, and a fifteen-line reveal component instead of an animation
+library.
+
+**If this session can write files and run commands**, scaffold it: the project,
+the tokens in `globals.css`, the smooth-scroll wrapper, the reveal component,
+`DESIGN.md`, then the page itself section by section from steps 1–3. Run it and
+look at it before saying anything about it.
+
+**If it can't** — which on a free ChatGPT account is always — produce the same
+project as complete files, each in its own copyable block, with the commands to
+run in order. Say plainly that nothing has been created. A person with those
+files and twenty minutes has a running page; a person with a description of them
+has homework.
+
+Either way the motion rules are not negotiable, because they're what separates a
+considered page from a demo reel:
+
+- Light `lerp` — heavier and the page fights the wheel
+- Reveals happen **once**, and never on the hero
+- `prefers-reduced-motion` disables both, with everything visible
+- Content is in the DOM and readable with JavaScript off
+
+**Then publishing.** If the session has real write access to somewhere it can
+go live, show the exact destination and content once, get an explicit yes to
+that specific preview, publish, and **read the live page back** before saying
+it's done. Otherwise: the project plus the deploy commands is the deliverable,
+and it is not live.
 
 **Write to brief:** Landing page (header) — the URL if it's live and verified,
-otherwise `ready to publish` with where the draft is.
+otherwise `ready to deploy` and where the project is.
 
 ---
 
@@ -145,16 +179,14 @@ otherwise `ready to publish` with where the draft is.
 **Ask:** Read the page out loud as the person from your ICP, on a phone, between
 two other things.
 
-Three checks, quickly:
-
-- **Does the first screen say what it is?** Not what it's *like* — what it is.
-- **Is there anything they'd have to already know to understand it?** Internal
-  vocabulary, a category name only insiders use, a feature name that means
-  nothing yet.
+- **Does the first screen say what it is?** Not what it's like — what it is.
+- **Is there anything they'd need to already know?** Internal vocabulary, a
+  category name only insiders use, a feature name that means nothing yet.
 - **Is the next step obvious without scrolling back up?**
+- **Does the motion get in the way?** If anyone notices the scrolling, the lerp
+  is too heavy.
 
-Fix what this surfaces now, while the page is still soft. It is a five-minute
-step that routinely catches something the previous twenty-five didn't, because
+Five minutes, and it routinely catches what the previous thirty-five didn't —
 it's the first time anyone reads the whole thing in order at speed.
 
 **Write to brief:** anything changed as a result.
@@ -164,31 +196,30 @@ it's the first time anyone reads the whole thing in order at speed.
 ## Closing the module
 
 Read back the headline, the button, and whether the page is live or ready.
-Nothing else.
 
 Then the checkpoint: ask them to post their URL if it's live, or their headline
-and button if it isn't. Where most people can't publish, the second is the normal
-answer and shouldn't feel like a shortfall — say so, because online nobody can
-see that everyone else is in the same position.
+and button if it isn't. Where most people can't publish, the second is the
+normal answer and shouldn't feel like a shortfall — say so, because online
+nobody can see that everyone else is in the same position.
 
 **Then what's next.** The page exists; nobody has seen it. Getting it in front
-of the segment — communities, directories, newsletters, events, and a 30-day
+of the segment — communities, directories, newsletters, events, a 30-day
 sequence — is the distribution work in `marketing-workshop`, which reads the
 segment and the ICP straight out of this brief. **This module doesn't do
 outreach or build contact lists**, and neither does that one.
 
-If the page is live, set one date to look at it again with actual numbers. A
-page nobody revisits is a page that stays wrong.
+If the page is live, set one date to look at it again with real numbers. A page
+nobody revisits is a page that stays wrong.
 
 ---
 
 ## Starting from nothing
 
 This module assumes a domain and somewhere to host. Plenty of people have
-neither, and that's a twenty-minute problem rather than a blocker — say so
-rather than letting it derail the step.
+neither, and it's a twenty-minute problem rather than a blocker — say so rather
+than letting it derail the step.
 
-With no domain, the page still gets written and the checklist still gets made;
-the build checklist gains one line at the top. Don't spend the module's time on
-choosing a domain name — it's the most tempting procrastination available at
-this exact moment, and the page is worth more than the name.
+With no domain the project still gets built and the deploy commands still get
+written; the checklist gains one line at the top. **Don't spend the module's
+time choosing a domain name.** It's the most tempting procrastination available
+at this exact moment, and the page is worth more than the name.

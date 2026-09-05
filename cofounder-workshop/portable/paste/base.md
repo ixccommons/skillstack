@@ -124,7 +124,7 @@ continuous doesn't mean fewer decisions in the person's hands.
 | Positioning and customer definition | A segment, a category, and one sentence — the express pass, not the full flow | `flows/position.md` | 15 | one step per turn |
 | The ICP | The account, the person, the trigger and the disqualifiers — specific enough to filter a list with | `flows/icp.md` | 25 | one step per turn |
 | The copy | The headline, the one action, three reasons to believe, the objection, and a voice to write them in | `flows/copy.md` | 25 | one step per turn |
-| The landing page | Section order, the states nobody remembers, and getting it live or paste-ready | `flows/page.md` | 30 | one step per turn |
+| The landing page | Section order, a design system that doesn't look generated, and a Next.js project that ships | `flows/page.md` | 40 | one step per turn |
 
 <!-- FLOWS:END -->
 
@@ -140,7 +140,7 @@ Most people won't name a module. Map what they ask for:
 - "who is this for" / "define my customer" / "work on my positioning" / "who exactly am I selling to" / "my value proposition" → **position**
 - "build my ICP" / "who exactly should I target" / "ideal customer profile" / "who do I go after" / "who should I not sell to" → **icp**
 - "write my copy" / "what should my headline say" / "what do I put on the page" / "how do I describe this" → **copy**
-- "build my landing page" / "put up a page" / "ship the page" / "make the site" → **page**
+- "build my landing page" / "put up a page" / "ship the page" / "make the site" / "design the page" → **page**
 
 <!-- ROUTING:END -->
 
@@ -280,10 +280,10 @@ saying "share your progress".
 | 0:30–0:45 | Positioning and customer definition (15 min) | A segment, a category, and one sentence — the express pass, not the full flow |
 | 0:45–1:10 | The ICP (25 min) | The account, the person, the trigger and the disqualifiers — specific enough to filter a list with |
 | 1:10–1:35 | The copy (25 min) | The headline, the one action, three reasons to believe, the objection, and a voice to write them in |
-| 1:35–2:05 | The landing page (30 min) | Section order, the states nobody remembers, and getting it live or paste-ready |
-| 2:05–2:20 | Wrap | Checkpoint round; every decision has an owner and a date |
+| 1:35–2:15 | The landing page (40 min) | Section order, a design system that doesn't look generated, and a Next.js project that ships |
+| 2:15–2:30 | Wrap | Checkpoint round; every decision has an owner and a date |
 
-Total: **2h 20m** of session time (5 open + 120 modules + 15 wrap), before any break, demo or show-and-tell. Subtract those from the session's actual length before promising this schedule to anyone.
+Total: **2h 30m** of session time (5 open + 130 modules + 15 wrap), before any break, demo or show-and-tell. Subtract those from the session's actual length before promising this schedule to anyone.
 
 <!-- TIMETABLE:END -->
 

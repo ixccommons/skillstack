@@ -37,6 +37,8 @@ DIVERGENT = {
     "flows/copy.md": "workshop twin only",
     "flows/icp.md": "workshop twin only",
     "flows/page.md": "workshop twin only",
+    "references/design-system.md": "workshop twin only — the page module's design system",
+    "references/nextjs-starter.md": "workshop twin only — the page module's starter",
     "scripts/build_express.py": "workshop twin only",
 }
 
