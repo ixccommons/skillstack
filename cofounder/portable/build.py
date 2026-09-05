@@ -65,7 +65,9 @@ def flows():
 def cited_references(flow_text):
     """The references/ files this flow names, in first-mention order."""
     seen = []
-    for name in re.findall(r"references/([a-z0-9-]+\.md)", flow_text):
+    # Not preceded by a path segment: `marketing-workshop/references/x.md`
+    # names another skill's file and is not ours to inline.
+    for name in re.findall(r"(?<![\w/-])references/([a-z0-9-]+\.md)", flow_text):
         if name not in seen:
             seen.append(name)
     return seen
@@ -78,8 +80,12 @@ def build(flow):
 
     parts = [BANNER.format(flow=flow) + adapter, skill]
     for name in cited_references(flow_text):
-        ref = (SKILL / "references" / name).read_text().rstrip()
-        parts.append(f"# Reference — `references/{name}`\n\n{ref}")
+        path = SKILL / "references" / name
+        if not path.exists():
+            # main() reports this as a problem; skip it so the caller sees the
+            # message rather than a traceback from the middle of a build.
+            continue
+        parts.append(f"# Reference — `references/{name}`\n\n{path.read_text().rstrip()}")
     parts.append(flow_text)
     return "\n\n---\n\n".join(parts) + "\n"
 
