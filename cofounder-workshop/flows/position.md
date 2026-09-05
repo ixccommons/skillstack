@@ -137,8 +137,13 @@ it, and next to it the segment they walked in believing. The pair is the
 interesting part, and in a room running the express pass it's also the fastest
 way to spot who is still in the everybody trap.
 
-**Then what's next.** The landing page. This brief carries the segment, the
-sentence and the problem — enough to write a hero section against. If
+**Then what's next.** The ICP module, which takes this segment and makes it
+findable — the account, the person, the trigger, and who gets refused. It will
+ask for an excluded group, because the express pass skips that question and the
+disqualifiers depend on it.
+
+After that, the landing page. This brief carries the segment, the sentence and
+the problem — enough to write a hero section against. If
 `marketing-workshop` is available, its copy flow reads exactly these fields and
 starts by deciding what one action the page has to produce. If it isn't, the
 sentence and the three things this module marked untested are what a page has to
