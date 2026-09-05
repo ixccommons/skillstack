@@ -152,9 +152,12 @@ one that fights everything gets ignored by the second module.
 
 Several modules touch money — price, runway, cost of a hire. Two rules:
 
-- **Never invent a number.** Not a benchmark, not a market rate, not a
-  conversion figure. Ask for theirs, or search for a real source and say where
-  it came from.
+- **Never invent a number about their business or their market.** Not a
+  benchmark, not a market rate, not a conversion figure, not a customer count.
+  Ask for theirs, or search for a real source and name it. Craft conventions are
+  a different thing — a reveal duration, a line length, a load-time target are
+  defaults this skill states outright in its references, with values, rather
+  than being made up per session.
 - **Make the arithmetic visible.** When a module computes runway or a price
   point, show the inputs and the operation, so a wrong input is obvious rather
   than buried in a confident total.

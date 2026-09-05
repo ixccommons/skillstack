@@ -72,8 +72,12 @@ answering everything at once:
   of the next step, no numbered plan of what's coming.
 - Never answer a step on the person's behalf, even when the answer seems
   obvious. The exception is drafting *options* when a step asks for them.
-- If a step's output is running past ~200 words, you're writing instead of
-  asking. Cut it.
+- **Asking steps** end in a question and stop. If the output there runs past
+  ~200 words you're writing instead of asking, so cut it.
+- **Producing steps** make the thing the person came for — a set of
+  alternatives, a profile, a page, a project. Those are as long as the artifact
+  needs and the word limit doesn't apply. They still stop afterwards, and they
+  still don't run into the next step.
 - If they answer two steps at once, take both — and still stop at the next.
 
 ---
@@ -251,9 +255,12 @@ one that fights everything gets ignored by the second module.
 
 Several modules touch money — price, runway, cost of a hire. Two rules:
 
-- **Never invent a number.** Not a benchmark, not a market rate, not a
-  conversion figure. Ask for theirs, or search for a real source and say where
-  it came from.
+- **Never invent a number about their business or their market.** Not a
+  benchmark, not a market rate, not a conversion figure, not a customer count.
+  Ask for theirs, or search for a real source and name it. Craft conventions are
+  a different thing — a reveal duration, a line length, a load-time target are
+  defaults this skill states outright in its references, with values, rather
+  than being made up per session.
 - **Make the arithmetic visible.** When a module computes runway or a price
   point, show the inputs and the operation, so a wrong input is obvious rather
   than buried in a confident total.
@@ -370,14 +377,14 @@ matter later when someone asks what was considered.
 
 ## Step 2 — The one action
 
-**Ask:** What is the single thing you want a visitor to do, and what happens
-immediately after they do it?
+**Ask:** What is the single thing you want a visitor to do?
 
 One action. A page offering three equal buttons is a page that hasn't decided,
 and it converts like one. The action follows from the stage: buy, book a call,
 request access, join a waitlist, install.
 
-Then the half people skip: **what happens next, honestly.** If the real answer
+**Then ask the half people skip:** what happens immediately after they do it —
+honestly. If the real answer
 is "I get an email and reply when I can", put that on the page. "I'll reply
 within a day" outperforms an implied automated flow that doesn't exist, and it
 is the one promise a pre-launch page can definitely keep.

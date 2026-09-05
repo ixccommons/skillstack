@@ -65,8 +65,12 @@ answering everything at once:
   of the next step, no numbered plan of what's coming.
 - Never answer a step on the person's behalf, even when the answer seems
   obvious. The exception is drafting *options* when a step asks for them.
-- If a step's output is running past ~200 words, you're writing instead of
-  asking. Cut it.
+- **Asking steps** end in a question and stop. If the output there runs past
+  ~200 words you're writing instead of asking, so cut it.
+- **Producing steps** make the thing the person came for — a set of
+  alternatives, a profile, a page, a project. Those are as long as the artifact
+  needs and the word limit doesn't apply. They still stop afterwards, and they
+  still don't run into the next step.
 - If they answer two steps at once, take both — and still stop at the next.
 
 ---

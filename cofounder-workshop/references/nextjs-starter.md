@@ -64,10 +64,26 @@ server-rendered layout.
 // app/smooth-scroll.tsx
 'use client'
 
+import { useEffect, useState } from 'react'
 import { ReactLenis } from 'lenis/react'
 import 'lenis/dist/lenis.css'
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+  // Off until we know the visitor hasn't asked for less motion. Starting off
+  // means someone with reduced-motion set never gets a frame of it; starting
+  // on would give them one and then take it away.
+  const [smooth, setSmooth] = useState(false)
+
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const update = () => setSmooth(!mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+
+  if (!smooth) return <>{children}</>
+
   return (
     <ReactLenis root options={{ lerp: 0.1, smoothWheel: true }}>
       {children}
@@ -118,7 +134,10 @@ export default function Reveal({
 
   useEffect(() => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduced || !ref.current) return setShown(true)
+    if (reduced || !ref.current) {
+      setShown(true)
+      return
+    }
 
     const io = new IntersectionObserver(
       ([entry]) => {
@@ -147,21 +166,34 @@ export default function Reveal({
 ```
 
 ```css
-/* one direction, one distance, one duration — the whole motion system */
+/* one direction, one distance, one duration — the whole motion system.
+   Visible by default; hidden only where scripting exists to un-hide it, so a
+   page whose JavaScript never runs still reads instead of rendering blank. */
 .reveal {
-  opacity: 0;
-  transform: translateY(16px);
   transition: opacity 400ms ease-out, transform 400ms ease-out;
 }
-.reveal[data-shown='true'] {
-  opacity: 1;
-  transform: none;
+
+@media (scripting: enabled) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  .reveal[data-shown='true'] {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 ```
+
+`@media (scripting: enabled)` is the whole trick, and it's the difference
+between a page that degrades and a page that disappears. If you need to support
+browsers that don't have it, set a `js` class on `<html>` from a blocking inline
+script and scope the hidden state to `.js .reveal` instead — same idea, more
+moving parts.
 
 Wrap sections, not individual words. Stagger siblings with `delay={80}`,
 `delay={160}` — and stop there. **Never wrap the hero.** It renders immediately.

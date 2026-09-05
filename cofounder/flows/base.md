@@ -31,10 +31,11 @@ is decided before anyone opens an editor.
 
 ## Step 1 — The problem
 
-**Ask:** What are you trying to accomplish, and who is it for?
+**Ask:** What are you trying to accomplish?
 
 Then, one at a time, only as far as their answers leave gaps:
 
+- Who is it for?
 - What problem does it solve, and why does that matter to them?
 - What have they already tried — theirs or someone else's?
 - What constraints are real? Time, money, skills, a platform they're stuck on.

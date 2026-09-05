@@ -108,11 +108,15 @@ Slow scroll and reveals are the easiest way to make a page feel considered and
 the easiest way to make it feel like a demo reel. The line is that **motion
 should be felt, not noticed**.
 
-- **Smooth scroll**: a light `lerp` (0.08–0.12). Heavier and the page feels
-  like it's fighting the wheel; that's the single most common complaint about
-  smooth-scroll sites.
-- **Reveals**: one direction, one distance (8–24px), one duration (250–500ms),
-  one easing. Stagger children by 40–80ms at most.
+These are values rather than ranges, on the same principle as the tokens above —
+the starter uses exactly these, and if you change one, change it once and
+everywhere:
+
+- **Smooth scroll**: `lerp: 0.1`. Heavier and the page feels like it's fighting
+  the wheel, which is the single most common complaint about smooth-scroll
+  sites.
+- **Reveals**: one direction, `16px`, `400ms`, one easing. Stagger siblings by
+  `80ms`.
 - **Once.** Elements reveal on first view and stay revealed. Re-animating on
   every scroll past is the tell that separates a designed page from a template.
 - **Never the hero.** The first screen renders immediately. Animating the

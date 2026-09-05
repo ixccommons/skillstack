@@ -63,14 +63,14 @@ matter later when someone asks what was considered.
 
 ## Step 2 — The one action
 
-**Ask:** What is the single thing you want a visitor to do, and what happens
-immediately after they do it?
+**Ask:** What is the single thing you want a visitor to do?
 
 One action. A page offering three equal buttons is a page that hasn't decided,
 and it converts like one. The action follows from the stage: buy, book a call,
 request access, join a waitlist, install.
 
-Then the half people skip: **what happens next, honestly.** If the real answer
+**Then ask the half people skip:** what happens immediately after they do it —
+honestly. If the real answer
 is "I get an email and reply when I can", put that on the page. "I'll reply
 within a day" outperforms an implied automated flow that doesn't exist, and it
 is the one promise a pre-launch page can definitely keep.

@@ -84,10 +84,11 @@ nothing is, it isn't an ICP attribute.
 
 ## Step 2 — The person, and the rest of the room
 
-**Ask:** Who feels the problem, and who has to say yes?
+**Ask:** Who feels the problem?
 
-Often not the same person, and conflating them is why a lot of copy addresses
-nobody. Get:
+Then, once that has an answer: who has to say yes? Often not the same person,
+and conflating them is why a lot of copy addresses nobody. Between the two,
+get:
 
 - **The person with the problem** — their role, what they're accountable for,
   and what they're judged on at the end of the quarter

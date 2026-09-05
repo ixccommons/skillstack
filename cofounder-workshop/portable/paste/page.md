@@ -72,8 +72,12 @@ answering everything at once:
   of the next step, no numbered plan of what's coming.
 - Never answer a step on the person's behalf, even when the answer seems
   obvious. The exception is drafting *options* when a step asks for them.
-- If a step's output is running past ~200 words, you're writing instead of
-  asking. Cut it.
+- **Asking steps** end in a question and stop. If the output there runs past
+  ~200 words you're writing instead of asking, so cut it.
+- **Producing steps** make the thing the person came for — a set of
+  alternatives, a profile, a page, a project. Those are as long as the artifact
+  needs and the word limit doesn't apply. They still stop afterwards, and they
+  still don't run into the next step.
 - If they answer two steps at once, take both — and still stop at the next.
 
 ---
@@ -251,9 +255,12 @@ one that fights everything gets ignored by the second module.
 
 Several modules touch money — price, runway, cost of a hire. Two rules:
 
-- **Never invent a number.** Not a benchmark, not a market rate, not a
-  conversion figure. Ask for theirs, or search for a real source and say where
-  it came from.
+- **Never invent a number about their business or their market.** Not a
+  benchmark, not a market rate, not a conversion figure, not a customer count.
+  Ask for theirs, or search for a real source and name it. Craft conventions are
+  a different thing — a reveal duration, a line length, a load-time target are
+  defaults this skill states outright in its references, with values, rather
+  than being made up per session.
 - **Make the arithmetic visible.** When a module computes runway or a price
   point, show the inputs and the operation, so a wrong input is obvious rather
   than buried in a confident total.
@@ -428,11 +435,15 @@ Slow scroll and reveals are the easiest way to make a page feel considered and
 the easiest way to make it feel like a demo reel. The line is that **motion
 should be felt, not noticed**.
 
-- **Smooth scroll**: a light `lerp` (0.08–0.12). Heavier and the page feels
-  like it's fighting the wheel; that's the single most common complaint about
-  smooth-scroll sites.
-- **Reveals**: one direction, one distance (8–24px), one duration (250–500ms),
-  one easing. Stagger children by 40–80ms at most.
+These are values rather than ranges, on the same principle as the tokens above —
+the starter uses exactly these, and if you change one, change it once and
+everywhere:
+
+- **Smooth scroll**: `lerp: 0.1`. Heavier and the page feels like it's fighting
+  the wheel, which is the single most common complaint about smooth-scroll
+  sites.
+- **Reveals**: one direction, `16px`, `400ms`, one easing. Stagger siblings by
+  `80ms`.
 - **Once.** Elements reveal on first view and stay revealed. Re-animating on
   every scroll past is the tell that separates a designed page from a template.
 - **Never the hero.** The first screen renders immediately. Animating the
@@ -513,10 +524,26 @@ server-rendered layout.
 // app/smooth-scroll.tsx
 'use client'
 
+import { useEffect, useState } from 'react'
 import { ReactLenis } from 'lenis/react'
 import 'lenis/dist/lenis.css'
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+  // Off until we know the visitor hasn't asked for less motion. Starting off
+  // means someone with reduced-motion set never gets a frame of it; starting
+  // on would give them one and then take it away.
+  const [smooth, setSmooth] = useState(false)
+
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const update = () => setSmooth(!mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+
+  if (!smooth) return <>{children}</>
+
   return (
     <ReactLenis root options={{ lerp: 0.1, smoothWheel: true }}>
       {children}
@@ -567,7 +594,10 @@ export default function Reveal({
 
   useEffect(() => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduced || !ref.current) return setShown(true)
+    if (reduced || !ref.current) {
+      setShown(true)
+      return
+    }
 
     const io = new IntersectionObserver(
       ([entry]) => {
@@ -596,21 +626,34 @@ export default function Reveal({
 ```
 
 ```css
-/* one direction, one distance, one duration — the whole motion system */
+/* one direction, one distance, one duration — the whole motion system.
+   Visible by default; hidden only where scripting exists to un-hide it, so a
+   page whose JavaScript never runs still reads instead of rendering blank. */
 .reveal {
-  opacity: 0;
-  transform: translateY(16px);
   transition: opacity 400ms ease-out, transform 400ms ease-out;
 }
-.reveal[data-shown='true'] {
-  opacity: 1;
-  transform: none;
+
+@media (scripting: enabled) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  .reveal[data-shown='true'] {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 ```
+
+`@media (scripting: enabled)` is the whole trick, and it's the difference
+between a page that degrades and a page that disappears. If you need to support
+browsers that don't have it, set a `js` class on `<html>` from a blocking inline
+script and scope the hidden state to `.js .reveal` instead — same idea, more
+moving parts.
 
 Wrap sections, not individual words. Stagger siblings with `delay={80}`,
 `delay={160}` — and stop there. **Never wrap the hero.** It renders immediately.
