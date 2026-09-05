@@ -161,7 +161,7 @@ would you have to change about it?"
 
 Read back the headline and the button. Nothing else — the brief holds the rest.
 
-Then the checkpoint: tell them to post their headline where the room can see it.
+Then the checkpoint: ask them to post their headline in the chat.
 
 **Then what's next.** The landing page module assembles this into a page and
 ships it — section order, the states nobody remembers, and either publishing it

@@ -2,7 +2,7 @@
 """Regenerate the parts of SKILL.md that are derived from the modules.
 
 Four blocks: the module table, the routing list, the brief's header table, and
-the room timetable. All four are generated from module frontmatter, so adding
+the session timetable. All four are generated from module frontmatter, so adding
 `flows/pricing.md` updates the router, the trigger phrases, the brief header
 and the schedule in one step — and none of them can drift from the modules
 they describe.
@@ -25,7 +25,7 @@ EMPTY = "_No modules yet._"
 CORE_HEADER = ["Company", "What it does", "Stage", "Objective this quarter"]
 TAIL_HEADER = ["Modules completed", "Last updated"]
 
-# Room blocks that aren't modules. The timetable is the sum of these and the
+# Session blocks that aren't modules. The timetable is the sum of these and the
 # modules' own minutes, so it stays honest about what the day actually costs.
 OPEN_MINUTES = 5
 WRAP_MINUTES = 15
@@ -98,10 +98,10 @@ def timetable(mods):
 
     total = at
     note = (
-        f"\nTotal: **{total // 60}h {total % 60:02d}m** of room time "
+        f"\nTotal: **{total // 60}h {total % 60:02d}m** of session time "
         f"({OPEN_MINUTES} open + {total - OPEN_MINUTES - WRAP_MINUTES} modules "
         f"+ {WRAP_MINUTES} wrap), before any break, demo or show-and-tell. "
-        "Subtract those from the room's actual length before promising this "
+        "Subtract those from the session's actual length before promising this "
         "schedule to anyone.\n"
     )
     return "\n".join(rows) + "\n" + note

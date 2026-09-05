@@ -196,9 +196,9 @@ brief points at it.
 
 Read back the one-line ICP and the top disqualifier. Nothing else.
 
-Then the checkpoint: tell them to post their ICP line and the group they're
-refusing where the room can see it. The refusal is the interesting half — a room
-full of ICPs with no disqualifiers is a room that hasn't chosen yet.
+Then the checkpoint: ask them to post their ICP line and the group they're
+refusing in the chat. The refusal is the interesting half — a set of ICPs with no
+disqualifiers is a group that hasn't chosen yet.
 
 **Then what's next.** The ICP is an input to two things and it's worth naming
 both so nobody expects this module to have done them. The landing page speaks to

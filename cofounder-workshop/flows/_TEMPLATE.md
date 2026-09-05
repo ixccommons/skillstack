@@ -69,8 +69,7 @@ Read back the decision only — one or two lines. The brief holds the rest.
 State the owner and the date it gets revisited. A decision without both is a
 conversation.
 
-Then the checkpoint: tell them to post [the headline result] where the room can
-see it.
+Then the checkpoint: ask them to post [the headline result] in the chat.
 
 Then what's next: [which module follows, and what it does with this one's
 output].

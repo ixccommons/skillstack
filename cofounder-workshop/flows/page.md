@@ -166,9 +166,10 @@ it's the first time anyone reads the whole thing in order at speed.
 Read back the headline, the button, and whether the page is live or ready.
 Nothing else.
 
-Then the checkpoint: tell them to post their URL if it's live, or their headline
-and button if it isn't. In a room where most people can't publish, the second is
-the normal answer and shouldn't feel like a shortfall.
+Then the checkpoint: ask them to post their URL if it's live, or their headline
+and button if it isn't. Where most people can't publish, the second is the normal
+answer and shouldn't feel like a shortfall — say so, because online nobody can
+see that everyone else is in the same position.
 
 **Then what's next.** The page exists; nobody has seen it. Getting it in front
 of the segment — communities, directories, newsletters, events, and a 30-day

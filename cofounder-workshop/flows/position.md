@@ -17,7 +17,7 @@ deserves.
 
 **Say what this is before you start.** It's an express pass: three questions,
 no stress-testing, deliberately worse than the full positioning flow. What it
-buys is an arc that finishes inside a short room. If the person has forty
+buys is an arc that finishes inside a short session. If the person has forty
 minutes and the `marketing-workshop` skill available, the full flow is a better
 use of the time and this module should say so rather than quietly substituting
 for it.
@@ -132,10 +132,10 @@ express pass.
 
 Read back the sentence and the segment. Nothing else.
 
-Then the checkpoint: tell them to post their sentence where the room can see
-it, and next to it the segment they walked in believing. The pair is the
-interesting part, and in a room running the express pass it's also the fastest
-way to spot who is still in the everybody trap.
+Then the checkpoint: ask them to post their sentence in the chat, and next to it
+the segment they started believing. The pair is the interesting part, and where
+everyone ran the express pass it's the fastest way to spot who is still in the
+everybody trap.
 
 **Then what's next.** The ICP module, which takes this segment and makes it
 findable — the account, the person, the trigger, and who gets refused. It will

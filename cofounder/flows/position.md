@@ -128,9 +128,9 @@ word (header), and the revision note.
 Read back the sentence and the one word. Nothing else — both briefs hold the
 rest.
 
-Then the checkpoint: tell them to post their one word and their sentence where
-the room can see it, and next to it the segment they started the day believing
-in. The pair is the interesting part.
+Then the checkpoint: ask them to post their one word and their sentence in the
+chat, and next to it the segment they started the session believing in. The pair
+is the interesting part.
 
 **Then what's next.** The landing page comes from the same marketing skill's
 copy flow, which reads the positioning brief directly — the value proposition,
