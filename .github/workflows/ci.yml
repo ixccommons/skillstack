@@ -41,5 +41,20 @@ jobs:
       - name: cofounder tests
         run: python3 -m unittest discover -s cofounder/tests -v
 
+      - name: Cofounder-workshop express pass freshness
+        run: python3 cofounder-workshop/scripts/build_express.py --check
+
+      - name: Cofounder-workshop index freshness
+        run: python3 cofounder-workshop/scripts/build_index.py --check
+
+      - name: Cofounder-workshop portable build freshness
+        run: python3 cofounder-workshop/portable/build.py --check
+
+      - name: Cofounder-workshop skill zip freshness
+        run: python3 cofounder-workshop/scripts/build_skill_zip.py --check
+
+      - name: cofounder-workshop tests
+        run: python3 -m unittest discover -s cofounder-workshop/tests -v
+
       - name: Python compilation check
-        run: python3 -m compileall marketing-workshop cofounder
+        run: python3 -m compileall marketing-workshop cofounder cofounder-workshop

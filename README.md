@@ -2,6 +2,20 @@
 
 Agent skills, one directory each.
 
+## cofounder-workshop
+
+The standalone twin of `cofounder`. Same modules and the same brief, but
+positioning runs as a ten-minute express pass carried inside the skill instead
+of handing off — so it needs nothing else installed, and the whole arc fits a
+short room. Use `cofounder` when there's time to position properly and both
+skills are available; use this one otherwise.
+
+The express pass is generated from `marketing-workshop`'s positioning flow by
+`cofounder-workshop/scripts/build_express.py` and committed, so an installed
+copy is self-contained while the text can't drift from the original. A parity
+test pins every file the two twins share and lists the four that legitimately
+differ.
+
 ## cofounder
 
 The business decisions a founder would normally take to a cofounder — what to
